@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A04B90F4251AD58C001C74CA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04B90F3251AD58C001C74CA /* main.cpp */; };
+		A04B90FC251AD67B001C74CA /* lut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04B90FB251AD67B001C74CA /* lut.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		A04B90F0251AD58C001C74CA /* lut */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; includeInIndex = 0; path = lut; sourceTree = BUILT_PRODUCTS_DIR; };
-		A04B90F3251AD58C001C74CA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A04B90FB251AD67B001C74CA /* lut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lut.cpp; path = ../../lut.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		A04B90F2251AD58C001C74CA /* lut */ = {
 			isa = PBXGroup;
 			children = (
-				A04B90F3251AD58C001C74CA /* main.cpp */,
+				A04B90FB251AD67B001C74CA /* lut.cpp */,
 			);
 			path = lut;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04B90F4251AD58C001C74CA /* main.cpp in Sources */,
+				A04B90FC251AD67B001C74CA /* lut.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
