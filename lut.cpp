@@ -2,6 +2,8 @@
 #include <string.h>
 #include <assert.h>
 #include "parse.h"
+#include <optional>
+#include <cstdio>
 
 int position_mask[4] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
 int lut_size_mask[5] = {0x0001, 0x0003, 0x000F, 0x00FF, 0xFFFF};
@@ -521,83 +523,35 @@ int main
 )
 {
   int lut_mask;
-  int sum_mask, carry_mask;
   int new_pos;
   char domain_char[4] = {'A', 'B', 'C', 'D'};
-  char sum_opt = 'a';
-
-  if (input_is_bad(argc, argv, &lut_mask, &sum_opt))
-  {
-
+  
+  
+  std::optional<int32_t> input_lutmask = parse_arguments(argc, argv);
+  
+  // If the arguments are illegal, it is a nullopt
+  
+  if (!input_lutmask) {
     printf("Illegal arguments\n");
     printf("Usage: lut <mask> (if the cell does not have a carry_out)\n");
     printf("Usage: lut <mask> c (if the cell has a carry_out)\n");
+    return (-1);
   }
-  else if (sum_opt != 'c')
+  lut_mask = *input_lutmask;
+  printf("LUTMASK %x\n", lut_mask);
+  if (is_mask_vcc(lut_mask, 4))
   {
-    printf("LUTMASK %x\n", lut_mask);
-    if (is_mask_vcc(lut_mask, 4))
-    {
-      printf("1\n");
-    }
-    else if (is_mask_gnd(lut_mask, 4))
-    {
-      printf("0\n");
-    }
-    else
-    {
-      new_pos = calculate_best_pivot(lut_mask, 4);
-      print_mask(lut_mask, 4, new_pos, &domain_char[0]);
-      printf("\n");
-    }
+    printf("1\n");
+  }
+  else if (is_mask_gnd(lut_mask, 4))
+  {
+    printf("0\n");
   }
   else
   {
-    sum_mask =  make_mask_independent_of(lut_mask, 4, 3);
-
-
-    if (is_mask_vcc(sum_mask, 3))
-    {
-      printf("SUM_EQUATION = 1\n");
-    }
-    else if (is_mask_gnd(sum_mask, 3))
-    {
-      printf("SUM_EQUATION = 0\n");
-    }
-    else
-    {
-      printf("SUM_EQUATION = ");
-      new_pos = calculate_best_pivot(sum_mask, 3);
-      print_mask(sum_mask, 3, new_pos, &domain_char[0]);
-      printf("\n");
-    }
-
-    domain_char[0] = 'A';
-    domain_char[1] = 'B';
-    domain_char[2] = 'C';
-    domain_char[3] = 'D';
-
-    carry_mask =  make_mask_independent_of_bar(lut_mask, 4, 3);
-
-    if (is_mask_vcc(carry_mask, 3))
-    {
-      printf("CARRY_EQUATION = 1\n");
-    }
-    else if (is_mask_gnd(carry_mask, 3))
-    {
-      printf("CARRY_EQUATION = 0\n");
-    }
-    else
-    {
-      printf("CARRY_EQUATION = ");
-      new_pos = calculate_best_pivot(carry_mask, 3);
-      print_mask(carry_mask, 3, new_pos, &domain_char[0]);
-      printf("\n");
-    }
-    
+    new_pos = calculate_best_pivot(lut_mask, 4);
+    print_mask(lut_mask, 4, new_pos, &domain_char[0]);
+    printf("\n");
   }
-
-  parse_arguments(argc, argv);
-
   return(0);
 }
