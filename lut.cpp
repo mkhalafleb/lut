@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include "parse.h"
 
 int position_mask[4] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
 int lut_size_mask[5] = {0x0001, 0x0003, 0x000F, 0x00FF, 0xFFFF};
@@ -596,6 +597,7 @@ int main
     
   }
 
+  parse_arguments(argc, argv);
 
   return(0);
 }
