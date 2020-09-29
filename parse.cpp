@@ -9,14 +9,26 @@
 #include <optional>
 #include <cstdint>
 #include <sstream>
-std::optional<uint16_t> parse_arguments (int argc, char **argv) {
-  if (argv == nullptr) {
-    return(std::nullopt);
-  }
+
+
+namespace lut_arg_parser {
+  
+  
+std::string validate_arguments (int argc, char **argv) {
+  
   if (argc != 2) {
-    return(std::nullopt);
+    return(std::string());
   }
-  std::istringstream ss(argv[1]);
+  
+  return(std::string(argv[1]));
+    
+}
+
+
+std::optional<uint16_t> parse_hex (const std::string_view hex_string ) {
+
+  std::string hstring(hex_string);
+  std::istringstream ss(hstring);
   uint16_t lutmask=0;
   ss  >> std::hex >> lutmask;
   if (!ss.eof() || ss.fail()) {
@@ -26,3 +38,4 @@ std::optional<uint16_t> parse_arguments (int argc, char **argv) {
   return(std::optional<uint16_t>{lutmask});
 }
 
+}

@@ -10,7 +10,15 @@
 
 #include <optional>
 #include <cstdio>
+#include <string>
+#include <string_view>
 
-std::optional<uint16_t> parse_arguments (int argc, char **argv);
+namespace lut_arg_parser {
+
+std::string validate_arguments (int argc, char **argv);
+  
+std::optional<uint16_t> parse_hex (const std::string_view hex_string);
+  
+}
 
 #endif /* PARSE_H */

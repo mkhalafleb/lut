@@ -527,7 +527,9 @@ int main
   char domain_char[4] = {'A', 'B', 'C', 'D'};
   
   
-  std::optional<uint16_t> input_lutmask = parse_arguments(argc, argv);
+  auto sarg = lut_arg_parser::validate_arguments(argc, argv);
+  
+  std::optional<uint16_t> input_lutmask = lut_arg_parser::parse_hex(sarg);
   
   // If the arguments are illegal, it is a nullopt
   
