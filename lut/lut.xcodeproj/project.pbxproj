@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A02388432522704500CD36EA /* parse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02388412522704500CD36EA /* parse.cpp */; };
+		A02388492523EFB800CD36EA /* lutmask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02388472523EFB800CD36EA /* lutmask.cpp */; };
 		A04B90FC251AD67B001C74CA /* lut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04B90FB251AD67B001C74CA /* lut.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		A02388412522704500CD36EA /* parse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parse.cpp; path = ../../parse.cpp; sourceTree = "<group>"; };
 		A02388422522704500CD36EA /* parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = parse.h; path = ../../parse.h; sourceTree = "<group>"; };
+		A02388472523EFB800CD36EA /* lutmask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = lutmask.cpp; path = ../../lutmask.cpp; sourceTree = "<group>"; };
+		A02388482523EFB800CD36EA /* lutmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lutmask.h; path = ../../lutmask.h; sourceTree = "<group>"; };
 		A04B90F0251AD58C001C74CA /* lut */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; includeInIndex = 0; path = lut; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04B90FB251AD67B001C74CA /* lut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lut.cpp; path = ../../lut.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +66,8 @@
 				A04B90FB251AD67B001C74CA /* lut.cpp */,
 				A02388412522704500CD36EA /* parse.cpp */,
 				A02388422522704500CD36EA /* parse.h */,
+				A02388472523EFB800CD36EA /* lutmask.cpp */,
+				A02388482523EFB800CD36EA /* lutmask.h */,
 			);
 			path = lut;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			files = (
 				A04B90FC251AD67B001C74CA /* lut.cpp in Sources */,
 				A02388432522704500CD36EA /* parse.cpp in Sources */,
+				A02388492523EFB800CD36EA /* lutmask.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

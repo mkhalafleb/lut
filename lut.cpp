@@ -535,8 +535,7 @@ int main
   
   if (!input_lutmask) {
     printf("Illegal arguments\n");
-    printf("Usage: lut <mask> (if the cell does not have a carry_out)\n");
-    printf("Usage: lut <mask> c (if the cell has a carry_out)\n");
+    printf("Usage: lut <mask> (hex)\n");
     return (-1);
   }
   
