@@ -527,7 +527,7 @@ int main
   char domain_char[4] = {'A', 'B', 'C', 'D'};
   
   
-  std::optional<int32_t> input_lutmask = parse_arguments(argc, argv);
+  std::optional<uint16_t> input_lutmask = parse_arguments(argc, argv);
   
   // If the arguments are illegal, it is a nullopt
   
@@ -537,7 +537,9 @@ int main
     printf("Usage: lut <mask> c (if the cell has a carry_out)\n");
     return (-1);
   }
-  lut_mask = *input_lutmask;
+  
+  // casting for now and later will clean up
+  lut_mask = static_cast <int> (*input_lutmask);
   printf("LUTMASK %x\n", lut_mask);
   if (is_mask_vcc(lut_mask, 4))
   {

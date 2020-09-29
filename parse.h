@@ -11,6 +11,6 @@
 #include <optional>
 #include <cstdio>
 
-std::optional<int32_t> parse_arguments (int argc, char **argv);
+std::optional<uint16_t> parse_arguments (int argc, char **argv);
 
 #endif /* PARSE_H */
