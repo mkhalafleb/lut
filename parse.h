@@ -11,13 +11,12 @@
 #include <optional>
 #include <cstdio>
 #include <string>
-#include <string_view>
 
 namespace lut_arg_parser {
 
 std::string validate_arguments (int argc, char **argv);
   
-std::optional<uint16_t> parse_hex (const std::string_view hex_string);
+std::optional<uint16_t> parse_hex (const std::string &hex_string);
   
 }
 

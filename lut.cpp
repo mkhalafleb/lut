@@ -11,50 +11,6 @@ int lut_size_mask[5] = {0x0001, 0x0003, 0x000F, 0x00FF, 0xFFFF};
 
 int calculate_best_pivot(int, int);
 
-bool input_is_bad
-(
-  int argc,
-  char **argv,
-  int *lut_mask,
-  char *sum_opt
-)
-{
-  bool bad_inputs = false;
-  char sum = 'a';
-  if ((argc > 3)
-    || (argc <= 1)
-    || (strlen(argv[1]) != 4))
-  {
-    bad_inputs = true;
-  }
-  else
-  {
-    if (sscanf(argv[1], "%x", lut_mask) != 1)
-    {
-      bad_inputs = true;
-    }
-
-    if (argc == 3)
-    {
-      if (sscanf(argv[2], "%c", &sum) != 1)
-      {
-        bad_inputs = true;
-      }
-      else if (sum != 'c')
-      {
-        bad_inputs = true;
-      }
-    }
-
-  }
-
-  (*sum_opt) = sum;
-  return (bad_inputs);
-}
-
-
-
-
 
 int make_mask_independent_of(int lut_mask, int size, int pos)
 {

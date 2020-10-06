@@ -25,10 +25,9 @@ std::string validate_arguments (int argc, char **argv) {
 }
 
 
-std::optional<uint16_t> parse_hex (const std::string_view hex_string ) {
+std::optional<uint16_t> parse_hex (const std::string  &hex_string ) {
 
-  std::string hstring(hex_string);
-  std::istringstream ss(hstring);
+  std::istringstream ss(hex_string);
   uint16_t lutmask=0;
   ss  >> std::hex >> lutmask;
   if (!ss.eof() || ss.fail()) {
