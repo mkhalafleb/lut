@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <iostream>
 #include "parse.h"
 #include <optional>
 #include <cstdio>
+#include <exception>
+#include "lutmask.h"
 
 int position_mask[4] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
 int lut_size_mask[5] = {0x0001, 0x0003, 0x000F, 0x00FF, 0xFFFF};
@@ -495,22 +498,27 @@ int main
     return (-1);
   }
   
-  // casting for now and later will clean up
-  lut_mask = static_cast <int> (*input_lutmask);
-  printf("LUTMASK %x\n", lut_mask);
-  if (is_mask_vcc(lut_mask, 4))
-  {
-    printf("1\n");
-  }
-  else if (is_mask_gnd(lut_mask, 4))
-  {
-    printf("0\n");
-  }
-  else
-  {
-    new_pos = calculate_best_pivot(lut_mask, 4);
-    print_mask(lut_mask, 4, new_pos, &domain_char[0]);
-    printf("\n");
+  try {
+    // casting for now and later will clean up
+    lut_mask = static_cast <int> (*input_lutmask);
+    lutmask::LutMask (lut_mask, 5);
+    printf("LUTMASK %x\n", lut_mask);
+    if (is_mask_vcc(lut_mask, 4))
+    {
+      printf("1\n");
+    }
+    else if (is_mask_gnd(lut_mask, 4))
+    {
+      printf("0\n");
+    }
+    else
+    {
+      new_pos = calculate_best_pivot(lut_mask, 4);
+      print_mask(lut_mask, 4, new_pos, &domain_char[0]);
+      printf("\n");
+    }
+  } catch (std::out_of_range &out_of_range) {
+    std::cout << out_of_range.what() << std::endl;
   }
   return(0);
 }
