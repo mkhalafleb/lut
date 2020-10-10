@@ -501,7 +501,8 @@ int main
   try {
     // casting for now and later will clean up
     lut_mask = static_cast <int> (*input_lutmask);
-    lutmask::LutMask (lut_mask, 5);
+  //   lutmask::LutMask (lut_mask, 5);
+    lutmask::LutMask (0xF001, 2);
     printf("LUTMASK %x\n", lut_mask);
     if (is_mask_vcc(lut_mask, 4))
     {
