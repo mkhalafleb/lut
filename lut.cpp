@@ -212,7 +212,6 @@ int find_overall_lit(int lut_mask, int size, int pos)
 int calculate_best_pivot(int lut_mask, int size)
 {
   int best_pivot;
-  bool found_xor = false;
   int i;
   int num_lit[4];
   int smallest;
@@ -520,6 +519,8 @@ int main
     }
   } catch (std::out_of_range &out_of_range) {
     std::cout << out_of_range.what() << std::endl;
+  } catch (std::logic_error &logic_error) {
+    std::cout << logic_error.what() << std::endl;
   }
   return(0);
 }
