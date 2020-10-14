@@ -501,13 +501,14 @@ int main
     // casting for now and later will clean up
     lut_mask = static_cast <int> (*input_lutmask);
   //   lutmask::LutMask (lut_mask, 5);
-    lutmask::LutMask (0xF001, 2);
+ //   lutmask::LutMask (0xF001, 2);
+    lutmask::LutMask  mask(*input_lutmask, 4);
     printf("LUTMASK %x\n", lut_mask);
-    if (is_mask_vcc(lut_mask, 4))
+    if (mask.IsVcc())
     {
       printf("1\n");
     }
-    else if (is_mask_gnd(lut_mask, 4))
+    else if (mask.IsGnd())
     {
       printf("0\n");
     }

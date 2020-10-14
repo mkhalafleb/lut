@@ -18,16 +18,16 @@ LutMask::LutMask(uint16_t mask, unsigned int size) : _lutmask(mask), _size(size)
   
   std::string o_range("");
 
-  if (size > LutMask::MaxLutSize) {
+  if (_size > LutMask::MaxLutSize) {
     // Throw Exception, class can't be constructed
-    o_range += "Illgeal Mask Size: " + std::to_string(size) + " , Maximum is " + std::to_string(LutMask::MaxLutSize) ;
+    o_range += "Illgeal Mask Size: " + std::to_string(_size) + " , Maximum is " + std::to_string(LutMask::MaxLutSize) ;
     throw std::out_of_range(o_range);
   }
   
-  if (mask > ((1U << size)  - 1U)) {
+  if (mask > lutmask::LutMask::lut_size_mask[_size]) {
     std::ostringstream ss;
     ss  << std::hex << mask;
-    o_range += "Illegal Mask: " + ss.str() + " with mask size: " + std::to_string(size);
+    o_range += "Illegal Mask: " + ss.str() + " with mask size: " + std::to_string(_size);
     throw std::out_of_range(o_range);
   }
   // Check if the mask fits within size.
@@ -48,16 +48,17 @@ bool LutMask::IsVcc() const {
 }
   
   
-lutmask::LutMask LutMask::CreateMaskIndependentOfPos(unsigned int pos) const {
-  
+void LutMask::ValidatePosToSize(unsigned int pos) const {
   if (pos >= _size) {
     std::string error("");
     error += "Can't Create independent mask at pos " + std::to_string(pos) + "With size " + std::to_string(_size);
     throw std::logic_error (error);
   }
+}
   
-  // In Shannon's Decomposition, a function g(x) = xf(x) + x'f(x');
-  // This Function basically computes f(x) by setting x = 1 in g(x) 
+  
+uint16_t LutMask::ShrinkMaskAtPos(uint16_t PosMask, unsigned int pos) const {
+  
   unsigned int shifter = 0x1;
   unsigned int small_shifter = 0x1;
   uint16_t work_mask = 0;
@@ -68,7 +69,7 @@ lutmask::LutMask LutMask::CreateMaskIndependentOfPos(unsigned int pos) const {
 
   for (i=0; i < shift_time; i++)
   {
-    if (LutMask::position_mask[pos] & shifter)
+    if (PosMask & shifter)
     {
       if (_lutmask & shifter)
       {
@@ -79,8 +80,35 @@ lutmask::LutMask LutMask::CreateMaskIndependentOfPos(unsigned int pos) const {
     shifter <<= 1;
   
   }
+  return (work_mask);
+  
+}
+
+  
+lutmask::LutMask LutMask::CreateMaskIndependentOfPos(unsigned int pos) const {
+  
+  
+  lutmask::LutMask::ValidatePosToSize(pos);
+  
+  // In Shannon's Decomposition, a function g(x) = xf(x) + x'f(x');
+  // This Function basically computes f(x) by setting x = 1 in g(x)
+  uint16_t work_mask = LutMask::ShrinkMaskAtPos(LutMask::position_mask[pos], pos);
+  
   return (lutmask::LutMask(work_mask, _size - 1));
     
+}
+  
+lutmask::LutMask LutMask::CreateMaskIndependentOfPosBar(unsigned int pos) const {
+    
+    
+  lutmask::LutMask::ValidatePosToSize(pos);
+    
+    // In Shannon's Decomposition, a function g(x) = xf(x) + x'f(x');
+    // This Function basically computes f(x') by setting x = 0 in g(x)
+  uint16_t work_mask = LutMask::ShrinkMaskAtPos(~LutMask::position_mask[pos], pos);
+    
+  return (lutmask::LutMask(work_mask, _size - 1));
+      
 }
 
   

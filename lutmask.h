@@ -42,6 +42,11 @@ public:
   
 private:
   
+  // Throws Exception if pos >= size;
+  void ValidatePosToSize(unsigned int pos) const;
+  
+  uint16_t ShrinkMaskAtPos(uint16_t PosMask, unsigned int pos) const;
+  
   uint16_t _lutmask;
   unsigned int _size;
     
