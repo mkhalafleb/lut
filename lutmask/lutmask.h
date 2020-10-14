@@ -29,7 +29,6 @@ public:
   // 0XF0F0 is when C = 1 and C = 0 and so on
   static constexpr uint16_t position_mask[LutMask::MaxLutSize] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
 
-  
   // Since it is a 16 bit mask, the size is either 0, 1, 2, or 3
   LutMask(uint16_t mask, unsigned int size);
   

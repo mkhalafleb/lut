@@ -111,5 +111,4 @@ lutmask::LutMask LutMask::CreateMaskIndependentOfPosBar(unsigned int pos) const 
       
 }
 
-  
-}
+}  // namespace lutmask
