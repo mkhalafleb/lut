@@ -1,56 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <iostream>
+#include "parse.h"
+#include <optional>
+#include <cstdio>
+#include <exception>
+#include "lutmask.h"
 
 int position_mask[4] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
 int lut_size_mask[5] = {0x0001, 0x0003, 0x000F, 0x00FF, 0xFFFF};
             /* 4, 3, 2, 1, 0 */
 
 int calculate_best_pivot(int, int);
-
-bool input_is_bad
-(
-  int argc,
-  char **argv,
-  int *lut_mask,
-  char *sum_opt
-)
-{
-  bool bad_inputs = false;
-  char sum = 'a';
-  if ((argc > 3)
-    || (argc <= 1)
-    || (strlen(argv[1]) != 4))
-  {
-    bad_inputs = true;
-  }
-  else
-  {
-    if (sscanf(argv[1], "%x", lut_mask) != 1)
-    {
-      bad_inputs = true;
-    }
-
-    if (argc == 3)
-    {
-      if (sscanf(argv[2], "%c", &sum) != 1)
-      {
-        bad_inputs = true;
-      }
-      else if (sum != 'c')
-      {
-        bad_inputs = true;
-      }
-    }
-
-  }
-
-  (*sum_opt) = sum;
-  return (bad_inputs);
-}
-
-
-
 
 
 int make_mask_independent_of(int lut_mask, int size, int pos)
@@ -250,7 +212,6 @@ int find_overall_lit(int lut_mask, int size, int pos)
 int calculate_best_pivot(int lut_mask, int size)
 {
   int best_pivot;
-  bool found_xor = false;
   int i;
   int num_lit[4];
   int smallest;
@@ -520,26 +481,34 @@ int main
 )
 {
   int lut_mask;
-  int sum_mask, carry_mask;
   int new_pos;
   char domain_char[4] = {'A', 'B', 'C', 'D'};
-  char sum_opt = 'a';
-
-  if (input_is_bad(argc, argv, &lut_mask, &sum_opt))
-  {
-
+  
+  
+  auto sarg = lut_arg_parser::validate_arguments(argc, argv);
+  
+  std::optional<uint16_t> input_lutmask = lut_arg_parser::parse_hex(sarg);
+  
+  // If the arguments are illegal, it is a nullopt
+  
+  if (!input_lutmask) {
     printf("Illegal arguments\n");
-    printf("Usage: lut <mask> (if the cell does not have a carry_out)\n");
-    printf("Usage: lut <mask> c (if the cell has a carry_out)\n");
+    printf("Usage: lut <mask> (hex)\n");
+    return (-1);
   }
-  else if (sum_opt != 'c')
-  {
+  
+  try {
+    // casting for now and later will clean up
+    lut_mask = static_cast <int> (*input_lutmask);
+  //   lutmask::LutMask (lut_mask, 5);
+ //   lutmask::LutMask (0xF001, 2);
+    lutmask::LutMask  mask(*input_lutmask, 4);
     printf("LUTMASK %x\n", lut_mask);
-    if (is_mask_vcc(lut_mask, 4))
+    if (mask.IsVcc())
     {
       printf("1\n");
     }
-    else if (is_mask_gnd(lut_mask, 4))
+    else if (mask.IsGnd())
     {
       printf("0\n");
     }
@@ -549,53 +518,10 @@ int main
       print_mask(lut_mask, 4, new_pos, &domain_char[0]);
       printf("\n");
     }
+  } catch (std::out_of_range &out_of_range) {
+    std::cout << out_of_range.what() << std::endl;
+  } catch (std::logic_error &logic_error) {
+    std::cout << logic_error.what() << std::endl;
   }
-  else
-  {
-    sum_mask =  make_mask_independent_of(lut_mask, 4, 3);
-
-
-    if (is_mask_vcc(sum_mask, 3))
-    {
-      printf("SUM_EQUATION = 1\n");
-    }
-    else if (is_mask_gnd(sum_mask, 3))
-    {
-      printf("SUM_EQUATION = 0\n");
-    }
-    else
-    {
-      printf("SUM_EQUATION = ");
-      new_pos = calculate_best_pivot(sum_mask, 3);
-      print_mask(sum_mask, 3, new_pos, &domain_char[0]);
-      printf("\n");
-    }
-
-    domain_char[0] = 'A';
-    domain_char[1] = 'B';
-    domain_char[2] = 'C';
-    domain_char[3] = 'D';
-
-    carry_mask =  make_mask_independent_of_bar(lut_mask, 4, 3);
-
-    if (is_mask_vcc(carry_mask, 3))
-    {
-      printf("CARRY_EQUATION = 1\n");
-    }
-    else if (is_mask_gnd(carry_mask, 3))
-    {
-      printf("CARRY_EQUATION = 0\n");
-    }
-    else
-    {
-      printf("CARRY_EQUATION = ");
-      new_pos = calculate_best_pivot(carry_mask, 3);
-      print_mask(carry_mask, 3, new_pos, &domain_char[0]);
-      printf("\n");
-    }
-    
-  }
-
-
   return(0);
 }
