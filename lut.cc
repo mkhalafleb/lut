@@ -2,11 +2,11 @@
 #include <string.h>
 #include <assert.h>
 #include <iostream>
-#include "parse.h"
 #include <optional>
 #include <cstdio>
 #include <exception>
-#include "lutmask.h"
+#include "lutmask/lutmask.h"
+#include "parse/parse.h"
 
 int position_mask[4] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
 int lut_size_mask[5] = {0x0001, 0x0003, 0x000F, 0x00FF, 0xFFFF};
