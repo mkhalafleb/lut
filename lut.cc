@@ -60,24 +60,6 @@ int make_mask_independent_of_bar(int lut_mask, int size, int pos) {
   return (work_mask);
 }
 
-bool is_xor(int lut_mask, int size, int pos) {
-  bool is_xor = false;
-
-  int fx, fx_bar;
-
-  fx = make_mask_independent_of(lut_mask, size, pos);
-  fx_bar = make_mask_independent_of_bar(lut_mask, size, pos);
-
-  if ((fx == 0) || (fx_bar == 0)) {
-    is_xor = false;
-  } else if ((fx ^ fx_bar) == (-1 & lut_size_mask[size - 1])) {
-    /* is fx = !fx' */
-    /* -1 & lut_size_mask[size] == VCC */
-    is_xor = true;
-  }
-
-  return (is_xor);
-}
 
 bool is_mask_vcc(int lut_mask, int size) {
   int vcc_mask = -1; /* 0xFFF */
@@ -121,6 +103,7 @@ int find_overall_lit(int lut_mask, int size, int pos) {
   int mask_fx;
   int best_pivot;
 
+//  std::cout << "Lit Mask: " << std::hex << lut_mask << " With Size:" << size << " at Pos:" << pos << std::endl;
   if ((is_mask_vcc(lut_mask, size)) || (is_mask_gnd(lut_mask, size))) {
     lit = 0;
   } else if (size == 1) {
@@ -131,7 +114,8 @@ int find_overall_lit(int lut_mask, int size, int pos) {
     mask_fx = make_mask_independent_of(lut_mask, size, pos);
     mask_fx_bar = make_mask_independent_of_bar(lut_mask, size, pos);
 
-    if (is_xor(lut_mask, size, pos)) {
+    lutmask::LutMask check_xor(lut_mask, size);
+    if (check_xor.IsXorAtPos(pos)) {
       best_pivot = calculate_best_pivot(mask_fx_bar, size - 1);
       lit = 1 + find_overall_lit(mask_fx_bar, size - 1, best_pivot);
     } else if (is_mask_vcc(mask_fx, size - 1) ||
@@ -160,6 +144,7 @@ int calculate_best_pivot(int lut_mask, int size) {
   int num_lit[4];
   int smallest;
 
+ // std:: cout << "Working on: " << std::hex << lut_mask << " With Size:"  << size << std::endl;
   if (size == 1) {
     best_pivot = 0;
   } else {
@@ -253,6 +238,8 @@ void print_mask(int lut_mask, int size, int pos, char *domain_char) {
 
   memcpy(&saved_domain[0], domain_char, size * sizeof(char));
 
+  lutmask::LutMask check_xor(lut_mask, size);
+
   if (size == 1) {
     assert(!is_mask_vcc(lut_mask, size));
     assert(!is_mask_gnd(lut_mask, size));
@@ -262,16 +249,16 @@ void print_mask(int lut_mask, int size, int pos, char *domain_char) {
     } else {
       printf("%c'", char_name);
     }
-  } else if (is_xor(lut_mask, size, pos)) {
+  } else if (check_xor.IsXorAtPos(pos)) {
     mask_fx_bar = make_mask_independent_of_bar(lut_mask, size, pos);
     new_pos = calculate_best_pivot(mask_fx_bar, size - 1);
     calculate_new_domain(domain_char, size, pos);
 
-    is_xor_only = is_xor(mask_fx_bar, size - 1, new_pos);
+    lutmask::LutMask scheck_xor(mask_fx_bar, size-1);
+    is_xor_only = scheck_xor.IsXorAtPos(new_pos);
     single_lit = is_single_literal(mask_fx_bar, size - 1, new_pos);
 
     if ((!is_xor_only) && (!single_lit))
-
     {
       printf("%c $ (", char_name);
     } else {
