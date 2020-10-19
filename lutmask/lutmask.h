@@ -39,10 +39,15 @@ public:
 
   bool IsLutMaskOnlyAndAtPos(unsigned int pos) const;
   bool IsSingleLiteralAtPos(unsigned int pos) const;
+  bool IsSingleLiteral() const;
+  bool IsSingleLiteralInv() const;
 
   bool IsIndependentOfPos(unsigned int pos) const;
 
   bool IsXorAtPos(unsigned int pos) const;
+
+  // To be Removed
+  unsigned int Size() const {return(_size);};
 
   bool IsGnd() const;
   bool IsVcc() const;

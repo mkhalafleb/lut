@@ -109,11 +109,19 @@ bool LutMask::IsSingleLiteralAtPos(unsigned int pos) const {
   return (false);
 }
 
+bool LutMask::IsSingleLiteral() const {
+  return (_size == 1);
+}
+
+bool LutMask::IsSingleLiteralInv() const {
+  return(IsSingleLiteral() && (_lutmask == 0x1));
+}
+
 bool LutMask::IsLutMaskOnlyAndAtPos(unsigned int pos) const {
   lutmask::LutMask mask_at_pos = CreateMaskIndependentOfPos(pos);
   lutmask::LutMask mask_at_pos_bar = CreateMaskIndependentOfPosBar(pos);
 
-  return (mask_at_pos.IsGnd() || mask_at_pos_bar.IsVcc());
+  return (mask_at_pos.IsGnd() || mask_at_pos_bar.IsGnd());
 
 }
 
