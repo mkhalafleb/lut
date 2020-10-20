@@ -9,6 +9,7 @@
 #define lutmask_h
 
 #include <cstdint>
+#include <limits>
 
 namespace lutmask {
   
@@ -34,10 +35,25 @@ public:
   
   LutMask CreateMaskIndependentOfPos(unsigned int pos) const;
   LutMask CreateMaskIndependentOfPosBar(unsigned int pos) const;
-  
-  
+  LutMask InvertMask() const;
+
+  bool IsLutMaskOnlyAndAtPos(unsigned int pos) const;
+  bool IsSingleLiteralAtPos(unsigned int pos) const;
+  bool IsSingleLiteral() const;
+  bool IsSingleLiteralInv() const;
+
+  bool IsIndependentOfPos(unsigned int pos) const;
+
+  bool IsXorAtPos(unsigned int pos) const;
+
+  // To be Removed
+  unsigned int Size() const {return(_size);};
+
   bool IsGnd() const;
   bool IsVcc() const;
+
+  bool  operator ==(const lutmask::LutMask &lut_mask) const;
+  bool  operator !=(const lutmask::LutMask &lut_mask) const;
   
 private:
   
