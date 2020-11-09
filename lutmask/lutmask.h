@@ -10,6 +10,7 @@
 
 #include <cstdint>
 #include <limits>
+#include <string>
 
 namespace lutmask {
   
@@ -54,6 +55,8 @@ public:
 
   bool  operator ==(const lutmask::LutMask &lut_mask) const;
   bool  operator !=(const lutmask::LutMask &lut_mask) const;
+
+  std::string PrintMask() const;
   
 private:
   
