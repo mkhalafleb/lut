@@ -156,4 +156,8 @@ bool LutMask::IsXorAtPos(unsigned int pos) const {
 
 }
 
+std::string LutMask::PrintMask() const {
+  return("");
+}
+
 }  // namespace lutmask
