@@ -1,0 +1,324 @@
+0	0
+1	A' & B' & C' & D'
+2	A & B' & C' & D'
+3	B' & C' & D'
+4	A' & B & C' & D'
+5	A' & C' & D'
+1f	D' & (A' & B' + C')
+20	A & B' & C & D'
+21	B' & D' & (A $ C')
+22	A & B' & D'
+23	B' & D' & (A + C')
+24	D' & (A & B' & C + A' & B & C')
+25	D' & (A & B' & C + A' & C')
+26	D' & (A & B' + A' & B & C')
+27	D' & (A & B' + A' & C')
+28	A & D' & (B $ C)
+29	D' & (A & (B $ C) + A' & B' & C')
+2a	A & D' & (C' + B')
+2b	D' & (A & (C' + B') + A' & B' & C')
+2c	D' & (B & C' + B' & A & C)
+13b5	B & D' & (A $ C') + B' & (C $ D + A')
+13b6	A & (C & D' + C' & B') + A' & (B $ (C + D))
+13b7	B & D' & (A $ C') + B' & (D' + C' + A')
+13b8	A & (D $ (B + C)) + A' & B' & (C + D)
+eaaa	A + B & C & D
+eaab	A + B & C & D + B' & C' & D'
+eaaf	A + C & B & D + C' & D'
+eab0	A & (C + D) + A' & C & (B $ D')
+eab1	A & (C + D) + A' & (B & C & D + B' & D')
+eab2	A & (C + D + B') + A' & C & (B $ D')
+eab3	D & (A + B & C) + D' & (A & C + B')
+ee3a	B & (D + A & C') + B' & (A + C & D')
+ee3b	A & (D + C' + B') + A' & (B $ D')
+ee3c	D & (A + B) + D' & (B $ C)
+ee3d	B & (D + C') + B' & (A & (C + D) + A' & D')
+ee3e	B & (D + C') + B' & (A + C & D')
+ee3f	B & (D + C') + B' & (A + D')
+ee40	A & D + A' & B & (C + D)
+ee41	A & D + A' & (B $ (C' & D'))
+ee42	A & (D + B' & C') + A' & B & (C + D)
+ee43	A & (D + B' & C') + A' & (B $ (C' & D'))
+ee44	A & D + A' & B
+ee45	A & D + A' & (B + C' & D')
+ee46	A & (D + B' & C') + A' & B
+ee47	A & (D + B' & C') + A' & (B + C' & D')
+ee48	B & (D + A $ C) + B' & A & D
+ee49	A & (D + B & C') + A' & (B $ (C' & D'))
+f00c	C & D + C' & B & D'
+f00d	C & D + C' & D' & (B + A')
+f00e	C & D + C' & D' & (A + B)
+f00f	C $ D'
+f010	C & (D + A' & B')
+f011	D & C + D' & A' & B'
+f012	D & C + D' & B' & (A $ C)
+f013	D & C + D' & B' & (C' + A')
+fbfe	A + C + B $ D
+fbff	A + C + D' + B'
+fc00	D & (B + C)
+fc01	D & (B + C) + D' & A' & B' & C'
+fc02	D & (B + C) + D' & A & B' & C'
+fc03	D $ (B' & C')
+fc04	C & D + C' & B & (D + A')
+fc05	D & (B + C) + D' & A' & C'
+fc06	C & D + C' & (B $ (A & D'))
+fc07	B & (D + A' & C') + B' & (C $ D')
+fc08	C & D + C' & B & (A + D)
+fc09	C & D + C' & (B $ (A' & D'))
+fc0a	D & (B + C) + D' & A & C'
+fc0b	B & (D + A & C') + B' & (C $ D')
+fc0c	C & D + C' & B
+fd39	B & (D + A & C') + B' & (C + A')
+fd3a	B & (D + A & C') + B' & (C + A $ D)
+fd3b	B & (D + A & C') + B' & (C + D' + A')
+fecc	B + D & (A + C)
+fecd	B + D $ (A' & C')
+fece	B + C & D + C' & A
+fecf	B + C & D + C' & (A + D')
+fed0	A & (D + B & C) + A' & (C + B & D)
+fed1	A & (D + B & C) + A' & (C + B $ D')
+fed2	A & (D + B $ C') + A' & (C + B & D)
+fed3	A & (D + B $ C') + A' & (C + B $ D')
+fed4	A & (D + B & C) + A' & (B + C)
+fef8	C + A & (B + D) + A' & B & D
+fef9	C + A & (B + D) + A' & (B $ D')
+fefa	A + C + B & D
+fefb	A + C + B $ D'
+fefc	B + C + A & D
+fefd	B + C + A $ D'
+fefe	A + B + C
+feff	A + B + C + D'
+ff00	D
+ff01	D + A' & B' & C'
+ff02	D + A & B' & C'
+ff0d	D + C' & (B + A')
+ff0e	D + C' & (A + B)
+ff0f	D + C'
+ff10	D + A' & B' & C
+ff11	D + A' & B'
+ff12	D + B' & (A $ C)
+ff13	D + B' & (C' + A')
+ff14	D + A' & (B $ C)
+ff15	D + A' & (C' + B')
+ff16	D + A & B' & C' + A' & (B $ C)
+ff17	D + A & B' & C' + A' & (C' + B')
+ff18	D + A & B & C' + A' & B' & C
+ff19	D + A & B & C' + A' & B'
+ff1a	D + A & C' + A' & B' & C
+ff1b	D + A & C' + A' & B'
+ff1c	D + B & C' + B' & A' & C
+ff1d	D + B & C' + B' & A'
+ff1e	D + C $ (A + B)
+ff1f	D + A' & B' + C'
+ff20	D + A & B' & C
+ff21	D + B' & (A $ C')
+ff22	D + A & B'
+ff23	D + B' & (A + C')
+ff24	D + A & B' & C + A' & B & C'
+ff25	D + A & B' & C + A' & C'
+ff26	D + A & B' + A' & B & C'
+ff27	D + A & B' + A' & C'
+ff28	D + A & (B $ C)
+ff29	D + A & (B $ C) + A' & B' & C'
+ff2a	D + A & (C' + B')
+ff2b	D + A & (C' + B') + A' & B' & C'
+ff2c	D + B & C' + B' & A & C
+ff2d	D + C $ (B + A')
+ff2e	D + B & C' + B' & A
+ff2f	D + A & B' + C'
+ff30	D + B' & C
+ff31	D + B' & (C + A')
+ff32	D + B' & (A + C)
+ff33	D + B'
+ff34	D + B & A' & C' + B' & C
+ff35	D + C & B' + C' & A'
+ff36	D + B $ (A + C)
+ff37	D + A' & C' + B'
+ff38	D + B & A & C' + B' & C
+ff39	D + B $ (C + A')
+ff3a	D + C & B' + C' & A
+ff3b	D + A & C' + B'
+ff3c	D + B $ C
+ff3d	D + B & C' + B' & (C + A')
+ff3e	D + B & C' + B' & (A + C)
+ff3f	D + C' + B'
+ff40	D + A' & B & C
+ff41	D + A' & (B $ C')
+ff42	D + A & B' & C' + A' & B & C
+ff43	D + B & A' & C + B' & C'
+ff44	D + A' & B
+ff45	D + A' & (B + C')
+ff46	D + A & B' & C' + A' & B
+ff47	D + B & A' + B' & C'
+ff48	D + B & (A $ C)
+ff49	D + A & B & C' + A' & (B $ C')
+ff4a	D + A & C' + A' & B & C
+ff4b	D + C $ (A + B')
+ff4c	D + B & (C' + A')
+ff4d	D + A & B & C' + A' & (B + C')
+ff4e	D + A & C' + A' & B
+ff4f	D + A' & B + C'
+ff50	D + A' & C
+ff51	D + A' & (C + B')
+ff52	D + A & B' & C' + A' & C
+ff53	D + C & A' + C' & B'
+ff54	D + A' & (B + C)
+ff55	D + A'
+ff56	D + A $ (B + C)
+ff57	D + B' & C' + A'
+ff58	D + A & B & C' + A' & C
+ff59	D + A $ (C + B')
+ff5a	D + A $ C
+ff5b	D + A & C' + A' & (C + B')
+ff5c	D + C & A' + C' & B
+ff5d	D + B & C' + A'
+ff5e	D + A & C' + A' & (B + C)
+ff5f	D + C' + A'
+ff60	D + C & (A $ B)
+ff61	D + A & B' & C + A' & (B $ C')
+ff62	D + A & B' + A' & B & C
+ff63	D + B $ (A + C')
+ff64	D + A & B' & C + A' & B
+ff65	D + A $ (B + C')
+ff66	D + A $ B
+ff67	D + A & B' + A' & (B + C')
+ff68	D + A & (B $ C) + A' & B & C
+ff69	D + A $ B $ C'
+ff6a	D + A $ (B & C)
+ff6b	D + A & (C' + B') + A' & (B $ C')
+ff6c	D + B $ (A & C)
+ff6d	D + A & (B $ C) + A' & (B + C')
+ff6e	D + A & (C' + B') + A' & B
+ff6f	D + A $ B + C'
+ff70	D + C & (B' + A')
+ff71	D + A & B' & C + A' & (C + B')
+ff72	D + A & B' + A' & C
+ff73	D + A' & C + B'
+ff74	D + B & A' + B' & C
+ff75	D + B' & C + A'
+ff76	D + A & B' + A' & (B + C)
+ff77	D + B' + A'
+ff78	D + C $ (A & B)
+ff79	D + A & (B $ C) + A' & (C + B')
+ff7a	D + A & (C' + B') + A' & C
+ff7b	D + A $ C + B'
+ff7c	D + B & (C' + A') + B' & C
+ff7d	D + B $ C + A'
+ff7e	D + A & (C' + B') + A' & (B + C)
+ff7f	D + C' + B' + A'
+ff80	D + A & B & C
+ff81	D + A & B & C + A' & B' & C'
+ff82	D + A & (B $ C')
+ff83	D + B & A & C + B' & C'
+ff84	D + B & (A $ C')
+ff85	D + A & B & C + A' & C'
+ff86	D + A & (B $ C') + A' & B & C'
+ff87	D + C $ (B' + A')
+ff88	D + A & B
+ff89	D + A & B + A' & B' & C'
+ff8a	D + A & (B + C')
+ff8b	D + B & A + B' & C'
+ff8c	D + B & (A + C')
+ff8d	D + A & B + A' & C'
+ff8e	D + A & (B + C') + A' & B & C'
+ff8f	D + A & B + C'
+ff90	D + C & (A $ B')
+ff91	D + A & B & C + A' & B'
+ff92	D + A & (B $ C') + A' & B' & C
+ff93	D + B $ (C' + A')
+ff94	D + A & B & C + A' & (B $ C)
+ff95	D + A $ (C' + B')
+ff96	D + A $ B $ C
+ff97	D + A & (B $ C') + A' & (C' + B')
+ff98	D + A & B + A' & B' & C
+ff99	D + A $ B'
+ff9a	D + A $ (B' & C)
+ff9b	D + A & (B + C') + A' & B'
+ff9c	D + B $ (A' & C)
+ff9d	D + A & B + A' & (C' + B')
+ff9e	D + A & (B + C') + A' & (B $ C)
+ff9f	D + A $ B' + C'
+ffa0	D + A & C
+ffa1	D + A & C + A' & B' & C'
+ffa2	D + A & (C + B')
+ffa3	D + C & A + C' & B'
+ffa4	D + A & C + A' & B & C'
+ffa5	D + A $ C'
+ffa6	D + A $ (B & C')
+ffa7	D + A & (C + B') + A' & C'
+ffa8	D + A & (B + C)
+ffa9	D + A $ (B' & C')
+ffaa	A + D
+ffab	A + D + B' & C'
+ffac	D + C & A + C' & B
+ffad	D + A & (B + C) + A' & C'
+ffae	A + D + B & C'
+ffaf	A + D + C'
+ffb0	D + C & (A + B')
+ffb1	D + A & C + A' & B'
+ffb2	D + A & (C + B') + A' & B' & C
+ffb3	D + A & C + B'
+ffb4	D + C $ (A' & B)
+ffb5	D + A & C + A' & (C' + B')
+ffb6	D + A & (C + B') + A' & (B $ C)
+ffb7	D + A $ C' + B'
+ffb8	D + B & A + B' & C
+ffb9	D + A & (B + C) + A' & B'
+ffba	A + D + B' & C
+ffbb	A + D + B'
+ffbc	D + B & (A + C') + B' & C
+ffbd	D + A & (B + C) + A' & (C' + B')
+ffbe	A + D + B $ C
+ffbf	A + D + C' + B'
+ffc0	D + B & C
+ffc1	D + B & C + B' & A' & C'
+ffc2	D + B & C + B' & A & C'
+ffc3	D + B $ C'
+ffc4	D + B & (C + A')
+ffc5	D + C & B + C' & A'
+ffc6	D + B $ (A & C')
+ffc7	D + B & (C + A') + B' & C'
+ffc8	D + B & (A + C)
+ffc9	D + B $ (A' & C')
+ffca	D + C & B + C' & A
+ffcb	D + B & (A + C) + B' & C'
+ffcc	B + D
+ffcd	B + D + A' & C'
+ffce	B + D + A & C'
+ffcf	B + D + C'
+ffd0	D + C & (B + A')
+ffd1	D + B & C + B' & A'
+ffd2	D + C $ (A & B')
+ffd3	D + B & C + B' & (C' + A')
+ffd4	D + A & B & C + A' & (B + C)
+ffd5	D + B & C + A'
+ffd6	D + A & (B $ C') + A' & (B + C)
+ffd7	D + B $ C' + A'
+ffd8	D + A & B + A' & C
+ffd9	D + A & B + A' & (C + B')
+ffda	D + A & (B + C') + A' & C
+ffdb	D + A & (B + C') + A' & (C + B')
+ffdc	B + D + A' & C
+ffdd	B + D + A'
+ffde	B + D + A $ C
+ffdf	B + D + C' + A'
+ffe0	D + C & (A + B)
+ffe1	D + C $ (A' & B')
+ffe2	D + B & C + B' & A
+ffe3	D + B & C + B' & (A + C')
+ffe4	D + A & C + A' & B
+ffe5	D + A & C + A' & (B + C')
+ffe6	D + A & (C + B') + A' & B
+ffe7	D + A & (C + B') + A' & (B + C')
+ffe8	D + A & (B + C) + A' & B & C
+ffe9	D + A & (B + C) + A' & (B $ C')
+ffea	A + D + B & C
+fff7	C + D + B' + A'
+fff8	C + D + A & B
+fff9	C + D + A $ B'
+fffa	A + C + D
+fffb	A + C + D + B'
+fffc	B + C + D
+fffd	B + C + D + A'
+fffe	A + B + C + D
+ffff	1

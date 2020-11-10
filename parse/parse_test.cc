@@ -1,7 +1,9 @@
 #include "parse.h"
+#include "readfile.h"
 #include "gtest/gtest.h"
 #include <string>
 #include <optional>
+
 
 namespace {
 
@@ -32,6 +34,20 @@ TEST_F(ParseTest, ILLEGAL) {
 
   std::optional<uint16_t> val = lut_arg_parser::parse_hex(hex_legal);
   ASSERT_FALSE(val.has_value());
+}
+
+
+
+// The fixture for testing class readfile
+class ReadFileTest : public ::testing::Test {
+ protected:
+};
+
+TEST_F(ReadFileTest, READFILE) {
+  std::string filename("results_file");
+  std::unordered_map<std::string, std::string> sop_map = readfile::ReadResultFile(filename);
+
+
 }
 
 }  // namespace
