@@ -98,7 +98,7 @@ void calculate_new_domain(char *domain_char, int size, int pos) {
   memcpy(domain_char, &temp_domain[0], (size - 1) * sizeof(char));
 }
 
-void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char) {
+std::string print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char) {
   /* print function as xf(x) + x'f(x') */
   unsigned int new_pos = mask.Size() - 1;
   char char_name = domain_char[pos];
@@ -111,16 +111,20 @@ void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char
   memcpy(&saved_domain[0], domain_char, mask.Size() * sizeof(char));
 
 
+  std::string string_mask("");
   if (mask.IsSingleLiteral()) {
     assert(!mask.IsVcc());
     assert(!mask.IsGnd());
     /* Either print x or x' */
-    if (!mask.IsSingleLiteralInv()) {
-      printf("%c", char_name);
-    } else {
-      printf("%c'", char_name);
+    string_mask += std::string(1, char_name);
+    if (mask.IsSingleLiteralInv()) {
+      string_mask += "'";
+
     }
-  } else if (mask.IsXorAtPos(pos)) {
+    return(string_mask);
+  } 
+
+  if (mask.IsXorAtPos(pos)) {
     lutmask::LutMask mask_fx_bar = mask.CreateMaskIndependentOfPosBar(pos);
     new_pos = calculate_best_pivot(mask_fx_bar);
     calculate_new_domain(domain_char, mask.Size(), pos);
@@ -128,19 +132,22 @@ void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char
     is_xor_only = mask_fx_bar.IsXorAtPos(new_pos);
     single_lit = mask_fx_bar.IsSingleLiteralAtPos(new_pos);
 
-    if ((!is_xor_only) && (!single_lit))
-    {
-      printf("%c $ (", char_name);
-    } else {
-      printf("%c $ ", char_name);
+
+    string_mask += std::string(1, char_name) + " $ ";
+    if ((!is_xor_only) && (!single_lit)) {
+      string_mask += "(";
     }
-    print_mask(mask_fx_bar, new_pos, domain_char);
+    
+    string_mask += print_mask(mask_fx_bar, new_pos, domain_char);
     memcpy(domain_char, &saved_domain[0], mask.Size() * sizeof(char));
     if ((!is_xor_only) && (!single_lit))
     {
-      printf(")");
+      string_mask += ")";
     }
-  } else if (!mask.IsIndependentOfPos(pos)) {
+    return (string_mask);
+  }
+
+  if (!mask.IsIndependentOfPos(pos)) {
     /* Compute F(x) and F(x') */
     lutmask::LutMask mask_fx = mask.CreateMaskIndependentOfPos(pos);
     lutmask::LutMask mask_fx_bar = mask.CreateMaskIndependentOfPosBar(pos);
@@ -148,7 +155,7 @@ void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char
     /* print xf(x) */
     if (!mask_fx.IsGnd()) {
       if (mask_fx.IsVcc()) {
-        printf("%c", char_name);
+        string_mask += std::string(1, char_name);
       } else {
         new_pos = calculate_best_pivot(mask_fx);
         calculate_new_domain(domain_char, mask.Size(), pos);
@@ -157,20 +164,21 @@ void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char
         if (mask_fx_bar.IsVcc()) {
           /* DO not print x */
         } else {
+          string_mask += std::string(1, char_name);
           if (!only_and) {
-            printf("%c & (", char_name);
+            string_mask += " & ("; 
           } else {
-            printf("%c & ", char_name);
+            string_mask += " & "; 
           }
         }
-        print_mask(mask_fx, new_pos, domain_char);
+        string_mask += print_mask(mask_fx, new_pos, domain_char);
         memcpy(domain_char, &saved_domain[0], mask.Size() * sizeof(char));
         if ((!only_and) && (!mask_fx_bar.IsVcc())) {
-          printf(")");
+          string_mask += ")";
         }
       }
       if (!mask_fx_bar.IsGnd()) {
-        printf(" + ");
+        string_mask += " + ";
       }
     }
 
@@ -180,21 +188,24 @@ void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char
       calculate_new_domain(domain_char, mask.Size(), pos);
       only_and = mask_fx_bar.IsLutMaskOnlyAndAtPos(new_pos);
       if (mask_fx_bar.IsVcc())  {
-        printf("%c'", char_name);
+        string_mask += std::string(1, char_name);
+        string_mask += "'";
       } else {
         if (mask_fx.IsVcc()) {
           /* Do not print x' */
         } else {
+          string_mask += std::string(1, char_name);
+          string_mask += "'";
           if (!only_and) {
-            printf("%c' & (", char_name);
+            string_mask += " & (";
           } else {
-            printf("%c' & ", char_name);
+            string_mask += " & ";
           }
         }
-        print_mask(mask_fx_bar, new_pos, domain_char);
+        string_mask += print_mask(mask_fx_bar, new_pos, domain_char);
         memcpy(domain_char, &saved_domain[0], mask.Size() * sizeof(char));
         if ((!only_and) && (!mask_fx.IsVcc())) {
-          printf(")");
+          string_mask += ")";
         }
       }
     }
@@ -203,9 +214,10 @@ void print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char
     lutmask::LutMask mask_fx = mask.CreateMaskIndependentOfPos(pos);
     new_pos = calculate_best_pivot(mask_fx);
     calculate_new_domain(domain_char, mask.Size(), pos);
-    print_mask(mask_fx, new_pos, domain_char);
+    string_mask += print_mask(mask_fx, new_pos, domain_char);
     memcpy(domain_char, &saved_domain[0], mask.Size() * sizeof(char));
   }
+  return(string_mask);
 }
 
 int main(int argc, char **argv) {
@@ -227,16 +239,17 @@ int main(int argc, char **argv) {
   try {
     //   lutmask::LutMask (lut_mask, 5);
     //   lutmask::LutMask (0xF001, 2);
+    std::string string_mask(""); 
     lutmask::LutMask mask(*input_lutmask, 4);
     if (mask.IsVcc()) {
-      printf("1\n");
+      string_mask = "1";
     } else if (mask.IsGnd()) {
-      printf("0\n");
+      string_mask = "0";
     } else {
       new_pos = calculate_best_pivot(mask);
-      print_mask(mask, new_pos, &domain_char[0]);
-      printf("\n");
+      string_mask = print_mask(mask, new_pos, &domain_char[0]);
     }
+    std::cout << string_mask << std::endl;
   } catch (std::out_of_range &out_of_range) {
     std::cout << out_of_range.what() << std::endl;
   } catch (std::logic_error &logic_error) {
