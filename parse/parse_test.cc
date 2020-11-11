@@ -48,6 +48,15 @@ TEST_F(ReadFileTest, READFILE) {
   std::unordered_map<std::string, std::string> sop_map = readfile::ReadResultFile(filename);
 
 
+  // 5 should be A' & C' & D'
+  // ffff should be 1
+  // 0 0
+  // fc00 D & (B + C)
+  //
+  ASSERT_EQ(sop_map.find("5")->second, "A' & C' & D'");
+  ASSERT_EQ(sop_map.find("ffff")->second, "1");
+  ASSERT_EQ(sop_map.find("0")->second, "0");
+  ASSERT_EQ(sop_map.find("fc00")->second, "D & (B + C)");
 }
 
 }  // namespace
