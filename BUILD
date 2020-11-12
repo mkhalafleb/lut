@@ -5,5 +5,6 @@ cc_binary(
     deps = [
         "//parse",
         "//lutmask",
+        "//lututil",
     ],
 )
