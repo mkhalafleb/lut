@@ -44,8 +44,9 @@ class ReadFileTest : public ::testing::Test {
 };
 
 TEST_F(ReadFileTest, READFILE) {
-  std::string filename("results_file");
-  std::unordered_map<std::string, std::string> sop_map = readfile::ReadResultFile(filename);
+  const std::string filename("results_file");
+  const std::string dir_path("parse");
+  std::unordered_map<std::string, std::string> sop_map = readfile::ReadResultFile(filename, dir_path);
 
 
   // 5 should be A' & C' & D'

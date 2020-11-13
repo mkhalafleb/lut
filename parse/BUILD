@@ -15,7 +15,7 @@ cc_test(
     name = "parse_test",
     srcs = ["parse_test.cc"],
     data = [
-        "results_file"
+        "results_file",
     ],
     deps = [
         ":parse",

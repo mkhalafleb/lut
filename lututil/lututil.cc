@@ -39,7 +39,7 @@ unsigned int calculate_best_pivot(const lutmask::LutMask &mask) {
 }
 
 
-std::string print_mask(const lutmask::LutMask mask, unsigned int pos, char *domain_char) {
+std::string print_mask(const lutmask::LutMask &mask, unsigned int pos, char *domain_char) {
   /* print function as xf(x) + x'f(x') */
   unsigned int new_pos = mask.Size() - 1;
   char char_name = domain_char[pos];
@@ -216,6 +216,24 @@ void calculate_new_domain(char *domain_char, int size, int pos) {
   assert(j == size - 1);
   /* shrunk by one size */
   memcpy(domain_char, &temp_domain[0], (size - 1) * sizeof(char));
+}
+
+std::string generate_sop (const lutmask::LutMask  &mask) {
+
+  char domain_char[4] = {'A', 'B', 'C', 'D'};
+
+
+  if (mask.IsVcc()) {
+    return("1");
+  }
+
+  if (mask.IsGnd()) {
+    return("0");
+  }
+
+  unsigned int new_pos = lututil::calculate_best_pivot(mask);
+  return(lututil::print_mask(mask, new_pos, &domain_char[0]));
+
 }
 
 
