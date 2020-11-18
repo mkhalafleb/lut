@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F62C64A3400000000"
+               BlueprintIdentifier = "2E9F9978DD31C04E00000000"
                BuildableName = "lututil_test"
                BlueprintName = "lututil_test"
                ReferencedContainer = "container:lut.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F62C64A3400000000"
+            BlueprintIdentifier = "2E9F9978DD31C04E00000000"
             BuildableName = "lututil_test"
             BlueprintName = "lututil_test"
             ReferencedContainer = "container:lut.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F62C64A3400000000"
+            BlueprintIdentifier = "2E9F9978DD31C04E00000000"
             BuildableName = "lututil_test"
             BlueprintName = "lututil_test"
             ReferencedContainer = "container:lut.xcodeproj">

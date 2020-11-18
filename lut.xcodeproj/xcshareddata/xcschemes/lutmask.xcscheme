@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F5229CE6400000000"
+               BlueprintIdentifier = "2E9F9978C082EF3C00000000"
                BuildableName = "liblutmask.a"
                BlueprintName = "lutmask"
                ReferencedContainer = "container:lut.xcodeproj">
@@ -43,7 +43,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F5229CE6400000000"
+            BlueprintIdentifier = "2E9F9978C082EF3C00000000"
             BuildableName = "liblutmask.a"
             BlueprintName = "lutmask"
             ReferencedContainer = "container:lut.xcodeproj">
@@ -59,7 +59,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F5229CE6400000000"
+            BlueprintIdentifier = "2E9F9978C082EF3C00000000"
             BuildableName = "liblutmask.a"
             BlueprintName = "lutmask"
             ReferencedContainer = "container:lut.xcodeproj">

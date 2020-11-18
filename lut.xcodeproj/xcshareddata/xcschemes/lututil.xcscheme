@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F8F454DD600000000"
+               BlueprintIdentifier = "2E9F9978487F778C00000000"
                BuildableName = "liblututil.a"
                BlueprintName = "lututil"
                ReferencedContainer = "container:lut.xcodeproj">
@@ -43,7 +43,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F8F454DD600000000"
+            BlueprintIdentifier = "2E9F9978487F778C00000000"
             BuildableName = "liblututil.a"
             BlueprintName = "lututil"
             ReferencedContainer = "container:lut.xcodeproj">
@@ -59,7 +59,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F8F454DD600000000"
+            BlueprintIdentifier = "2E9F9978487F778C00000000"
             BuildableName = "liblututil.a"
             BlueprintName = "lututil"
             ReferencedContainer = "container:lut.xcodeproj">

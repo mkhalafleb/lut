@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F828274B600000000"
-               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
-               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               BlueprintIdentifier = "2E9F9978D5634DA800000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951FF1CCB70400000000"
-               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
-               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               BlueprintIdentifier = "2E9F9978D5634DA800000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F828274B600000000"
-               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
-               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               BlueprintIdentifier = "2E9F997830B192DA00000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,9 +56,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951FF1CCB70400000000"
-               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
-               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               BlueprintIdentifier = "2E9F9978D5634DA800000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -70,9 +70,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F1FFCCC0600000000"
-               BuildableName = "lib_idx_gtest_8DD1FB0B_macos_min11.0.a"
-               BlueprintName = "_idx_gtest_8DD1FB0B_macos_min11.0"
+               BlueprintIdentifier = "2E9F997830B192DA00000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -84,9 +84,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951FF1CCB70400000000"
-               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
-               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               BlueprintIdentifier = "2E9F997830B192DA00000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -98,9 +98,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F828274B600000000"
-               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
-               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               BlueprintIdentifier = "2E9F9978D5634DA800000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -112,37 +112,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F959C509400000000"
-               BuildableName = "lib_idx_gtest_main_0F29A740_macos_min11.0.a"
-               BlueprintName = "_idx_gtest_main_0F29A740_macos_min11.0"
-               ReferencedContainer = "container:lut.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F828274B600000000"
-               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
-               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
-               ReferencedContainer = "container:lut.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951FF1CCB70400000000"
-               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
-               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               BlueprintIdentifier = "2E9F997830B192DA00000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0"
                ReferencedContainer = "container:lut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

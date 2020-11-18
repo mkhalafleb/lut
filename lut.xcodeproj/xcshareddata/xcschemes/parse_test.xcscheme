@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F231DBEEE00000000"
+               BlueprintIdentifier = "2E9F9978255D54E600000000"
                BuildableName = "parse_test"
                BlueprintName = "parse_test"
                ReferencedContainer = "container:lut.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F231DBEEE00000000"
+            BlueprintIdentifier = "2E9F9978255D54E600000000"
             BuildableName = "parse_test"
             BlueprintName = "parse_test"
             ReferencedContainer = "container:lut.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F231DBEEE00000000"
+            BlueprintIdentifier = "2E9F9978255D54E600000000"
             BuildableName = "parse_test"
             BlueprintName = "parse_test"
             ReferencedContainer = "container:lut.xcodeproj">

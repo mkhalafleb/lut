@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951FC0EEF13200000000"
+               BlueprintIdentifier = "2E9F9978DC18FCF400000000"
                BuildableName = "libparse.a"
                BlueprintName = "parse"
                ReferencedContainer = "container:lut.xcodeproj">
@@ -43,7 +43,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951FC0EEF13200000000"
+            BlueprintIdentifier = "2E9F9978DC18FCF400000000"
             BuildableName = "libparse.a"
             BlueprintName = "parse"
             ReferencedContainer = "container:lut.xcodeproj">
@@ -59,7 +59,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951FC0EEF13200000000"
+            BlueprintIdentifier = "2E9F9978DC18FCF400000000"
             BuildableName = "libparse.a"
             BlueprintName = "parse"
             ReferencedContainer = "container:lut.xcodeproj">
