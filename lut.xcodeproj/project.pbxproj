@@ -38,7 +38,6 @@
 		D2E9700D08A5431600000000 /* libparse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libparse.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E9700D1CDD5D0800000000 /* lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E9700D1F49311C00000000 /* liblutmask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblutmask.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2E9700D23C04D5A00000000 /* BUILD */ = {isa = PBXFileReference; lastKnownFileType = text; name = BUILD; path = "tulsi-workspace//BUILD"; sourceTree = "<group>"; };
 		D2E9700D255D54E600000000 /* parse_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = parse_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E9700D27A9DDFA00000000 /* lut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = lut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E9700D4CD562E500000000 /* parse.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parse.cc; path = parse/parse.cc; sourceTree = "<group>"; };
@@ -115,7 +114,6 @@
 			children = (
 				A03CD7332564DE9B0063CD00 /* BUILD */,
 				A03CD7322564DE9B0063CD00 /* lut.cc */,
-				D2E9700D23C04D5A00000000 /* BUILD */,
 			);
 			name = /;
 			sourceTree = "<group>";
