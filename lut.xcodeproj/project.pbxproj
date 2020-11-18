@@ -1,0 +1,1568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DF644954CD562E500000000 /* parse.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700D4CD562E500000000 /* parse.cc */; };
+		1DF6449581EEC38700000000 /* parse_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700D81EEC38700000000 /* parse_test.cc */; };
+		1DF6449583F3E10800000000 /* lututil.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700D83F3E10800000000 /* lututil.cc */; };
+		1DF64495C833083800000000 /* lutmask_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700DC833083800000000 /* lutmask_test.cc */; };
+		1DF64495D816EF1A00000000 /* lutmask.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700DD816EF1A00000000 /* lutmask.cc */; };
+		1DF64495F0CAD23900000000 /* readfile.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700DF0CAD23900000000 /* readfile.cc */; };
+		1DF64495FFA0602200000000 /* lututil_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2E9700DFFA0602200000000 /* lututil_test.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44AC0CA830B192DB00000000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E7176E59EEFCBBF00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E9F997830B192DA00000000;
+		};
+		44AC0CA863DAC7B700000000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E7176E59EEFCBBF00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A5282D963DAC7B600000000;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A03CD7322564DE9B0063CD00 /* lut.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lut.cc; sourceTree = "<group>"; };
+		A03CD7332564DE9B0063CD00 /* BUILD */ = {isa = PBXFileReference; lastKnownFileType = text; path = BUILD; sourceTree = "<group>"; };
+		D2E9700D040308AA00000000 /* lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700D08A5431600000000 /* libparse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libparse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700D1CDD5D0800000000 /* lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700D1F49311C00000000 /* liblutmask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblutmask.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700D255D54E600000000 /* parse_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = parse_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700D27A9DDFA00000000 /* lut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = lut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700D4CD562E500000000 /* parse.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parse.cc; path = parse/parse.cc; sourceTree = "<group>"; };
+		D2E9700D6D1FBE4E00000000 /* readfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = readfile.h; path = parse/readfile.h; sourceTree = "<group>"; };
+		D2E9700D81EEC38700000000 /* parse_test.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parse_test.cc; path = parse/parse_test.cc; sourceTree = "<group>"; };
+		D2E9700D83F3E10800000000 /* lututil.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = lututil.cc; path = lututil/lututil.cc; sourceTree = "<group>"; };
+		D2E9700D9C0AE44200000000 /* liblututil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblututil.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700DA2C7852200000000 /* lutmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lutmask.h; path = lutmask/lutmask.h; sourceTree = "<group>"; };
+		D2E9700DB063C7DD00000000 /* BUILD */ = {isa = PBXFileReference; lastKnownFileType = text; name = BUILD; path = parse/BUILD; sourceTree = "<group>"; };
+		D2E9700DC18C77E700000000 /* BUILD */ = {isa = PBXFileReference; lastKnownFileType = text; name = BUILD; path = lututil/BUILD; sourceTree = "<group>"; };
+		D2E9700DC833083800000000 /* lutmask_test.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = lutmask_test.cc; path = lutmask/lutmask_test.cc; sourceTree = "<group>"; };
+		D2E9700DD1A4118F00000000 /* BUILD */ = {isa = PBXFileReference; lastKnownFileType = text; name = BUILD; path = lutmask/BUILD; sourceTree = "<group>"; };
+		D2E9700DD461B69A00000000 /* results_file */ = {isa = PBXFileReference; lastKnownFileType = text; name = results_file; path = parse/results_file; sourceTree = "<group>"; };
+		D2E9700DD816EF1A00000000 /* lutmask.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = lutmask.cc; path = lutmask/lutmask.cc; sourceTree = "<group>"; };
+		D2E9700DDD31C04E00000000 /* lututil_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = lututil_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700DE45A184D00000000 /* parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = parse.h; path = parse/parse.h; sourceTree = "<group>"; };
+		D2E9700DF0CAD23900000000 /* readfile.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = readfile.cc; path = parse/readfile.cc; sourceTree = "<group>"; };
+		D2E9700DF7D5B1ED00000000 /* results_file */ = {isa = PBXFileReference; lastKnownFileType = text; name = results_file; path = lututil/results_file; sourceTree = "<group>"; };
+		D2E9700DFB5EC4A700000000 /* lututil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lututil.h; path = lututil/lututil.h; sourceTree = "<group>"; };
+		D2E9700DFDAE514A00000000 /* lutmask_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = lutmask_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9700DFFA0602200000000 /* lututil_test.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = lututil_test.cc; path = lututil/lututil_test.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		AC56AC4F3A8F197D00000000 /* mainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				AC56AC4FB3A9E9FD00000000 /* / */,
+				AC56AC4FE61107D900000000 /* Products */,
+				AC56AC4FE041779E00000000 /* lutmask */,
+				AC56AC4FA43FBBC600000000 /* lututil */,
+				AC56AC4F6E0C7E7A00000000 /* parse */,
+			);
+			name = mainGroup;
+			sourceTree = SOURCE_ROOT;
+		};
+		AC56AC4F496EA4B400000000 /* Indexer */ = {
+			isa = PBXGroup;
+			children = (
+				D2E9700D040308AA00000000 /* lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a */,
+				D2E9700D1CDD5D0800000000 /* lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a */,
+			);
+			name = Indexer;
+			sourceTree = "<group>";
+		};
+		AC56AC4F6E0C7E7A00000000 /* parse */ = {
+			isa = PBXGroup;
+			children = (
+				D2E9700DB063C7DD00000000 /* BUILD */,
+				D2E9700D4CD562E500000000 /* parse.cc */,
+				D2E9700DE45A184D00000000 /* parse.h */,
+				D2E9700D81EEC38700000000 /* parse_test.cc */,
+				D2E9700DF0CAD23900000000 /* readfile.cc */,
+				D2E9700D6D1FBE4E00000000 /* readfile.h */,
+				D2E9700DD461B69A00000000 /* results_file */,
+			);
+			name = parse;
+			sourceTree = "<group>";
+		};
+		AC56AC4FA43FBBC600000000 /* lututil */ = {
+			isa = PBXGroup;
+			children = (
+				D2E9700DC18C77E700000000 /* BUILD */,
+				D2E9700D83F3E10800000000 /* lututil.cc */,
+				D2E9700DFB5EC4A700000000 /* lututil.h */,
+				D2E9700DFFA0602200000000 /* lututil_test.cc */,
+				D2E9700DF7D5B1ED00000000 /* results_file */,
+			);
+			name = lututil;
+			sourceTree = "<group>";
+		};
+		AC56AC4FB3A9E9FD00000000 /* / */ = {
+			isa = PBXGroup;
+			children = (
+				A03CD7332564DE9B0063CD00 /* BUILD */,
+				A03CD7322564DE9B0063CD00 /* lut.cc */,
+			);
+			name = /;
+			sourceTree = "<group>";
+		};
+		AC56AC4FE041779E00000000 /* lutmask */ = {
+			isa = PBXGroup;
+			children = (
+				D2E9700DD1A4118F00000000 /* BUILD */,
+				D2E9700DD816EF1A00000000 /* lutmask.cc */,
+				D2E9700DA2C7852200000000 /* lutmask.h */,
+				D2E9700DC833083800000000 /* lutmask_test.cc */,
+			);
+			name = lutmask;
+			sourceTree = "<group>";
+		};
+		AC56AC4FE61107D900000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC56AC4F496EA4B400000000 /* Indexer */,
+				D2E9700D1F49311C00000000 /* liblutmask.a */,
+				D2E9700D9C0AE44200000000 /* liblututil.a */,
+				D2E9700D08A5431600000000 /* libparse.a */,
+				D2E9700D27A9DDFA00000000 /* lut.app */,
+				D2E9700DFDAE514A00000000 /* lutmask_test */,
+				D2E9700DDD31C04E00000000 /* lututil_test */,
+				D2E9700D255D54E600000000 /* parse_test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		3A5282D963DAC7B600000000 /* _bazel_clean_ */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "\"/Users/mkhalaf/.bazel/bin/bazel\" \"bazel-bin\"";
+			buildConfigurationList = 4EDF240F390B86EE00000000 /* Build configuration list for PBXLegacyTarget "_bazel_clean_" */;
+			buildPhases = (
+			);
+			buildToolPath = "${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_clean.sh";
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = _bazel_clean_;
+			passBuildSettingsInEnvironment = 1;
+			productName = _bazel_clean_;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		2E9F9978255D54E600000000 /* parse_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240F1663EEAD00000000 /* Build configuration list for PBXNativeTarget "parse_test" */;
+			buildPhases = (
+				D8371ACA31634C6A00000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = parse_test;
+			productName = parse_test;
+			productReference = D2E9700D255D54E600000000 /* parse_test */;
+			productType = "com.apple.product-type.tool";
+		};
+		2E9F997830B192DA00000000 /* _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240F7A186DD900000000 /* Build configuration list for PBXNativeTarget "_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0" */;
+			buildPhases = (
+				2A74C3450000000000000000 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0;
+			productName = _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0;
+			productReference = D2E9700D040308AA00000000 /* lib_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E9F99783DDF977E00000000 /* lut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240FC542B36F00000000 /* Build configuration list for PBXNativeTarget "lut" */;
+			buildPhases = (
+				D8371ACA0481E23A00000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = lut;
+			productName = lut;
+			productReference = D2E9700D27A9DDFA00000000 /* lut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E9F9978487F778C00000000 /* lututil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240F04DB5C3A00000000 /* Build configuration list for PBXNativeTarget "lututil" */;
+			buildPhases = (
+				D8371ACABF218A1100000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = lututil;
+			productName = lututil;
+			productReference = D2E9700D9C0AE44200000000 /* liblututil.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E9F9978C082EF3C00000000 /* lutmask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240FADCF579800000000 /* Build configuration list for PBXNativeTarget "lutmask" */;
+			buildPhases = (
+				D8371ACADCC7403800000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = lutmask;
+			productName = lutmask;
+			productReference = D2E9700D1F49311C00000000 /* liblutmask.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E9F9978D5634DA800000000 /* _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240F8D49FCE800000000 /* Build configuration list for PBXNativeTarget "_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0" */;
+			buildPhases = (
+				2A74C3450000000000000001 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+				C944958330B192DB00000000 /* PBXTargetDependency */,
+				C944958330B192DB00000000 /* PBXTargetDependency */,
+				C944958330B192DB00000000 /* PBXTargetDependency */,
+			);
+			name = _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0;
+			productName = _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0;
+			productReference = D2E9700D1CDD5D0800000000 /* lib_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E9F9978DC18FCF400000000 /* parse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240FBF3E7CC700000000 /* Build configuration list for PBXNativeTarget "parse" */;
+			buildPhases = (
+				D8371ACAD5DC5E9E00000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = parse;
+			productName = parse;
+			productReference = D2E9700D08A5431600000000 /* libparse.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E9F9978DD31C04E00000000 /* lututil_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240FEB1896D900000000 /* Build configuration list for PBXNativeTarget "lututil_test" */;
+			buildPhases = (
+				D8371ACA30091AC700000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = lututil_test;
+			productName = lututil_test;
+			productReference = D2E9700DDD31C04E00000000 /* lututil_test */;
+			productType = "com.apple.product-type.tool";
+		};
+		2E9F9978FDAE514A00000000 /* lutmask_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDF240FA233106D00000000 /* Build configuration list for PBXNativeTarget "lutmask_test" */;
+			buildPhases = (
+				D8371ACAEA7C227000000000 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C944958363DAC7B700000000 /* PBXTargetDependency */,
+			);
+			name = lutmask_test;
+			productName = lutmask_test;
+			productReference = D2E9700DFDAE514A00000000 /* lutmask_test */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E7176E59EEFCBBF00000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 1220;
+			};
+			buildConfigurationList = 4EDF240FE68B922000000000 /* Build configuration list for PBXProject "lut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC56AC4F3A8F197D00000000 /* mainGroup */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A5282D963DAC7B600000000 /* _bazel_clean_ */,
+				2E9F997830B192DA00000000 /* _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0 */,
+				2E9F9978D5634DA800000000 /* _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0 */,
+				2E9F99783DDF977E00000000 /* lut */,
+				2E9F9978C082EF3C00000000 /* lutmask */,
+				2E9F9978FDAE514A00000000 /* lutmask_test */,
+				2E9F9978487F778C00000000 /* lututil */,
+				2E9F9978DD31C04E00000000 /* lututil_test */,
+				2E9F9978DC18FCF400000000 /* parse */,
+				2E9F9978255D54E600000000 /* parse_test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D8371ACA0481E23A00000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //:lut --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+		D8371ACA30091AC700000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //lututil:lututil_test --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+		D8371ACA31634C6A00000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //parse:parse_test --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+		D8371ACABF218A1100000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //lututil:lututil --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+		D8371ACAD5DC5E9E00000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //parse:parse --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+		D8371ACADCC7403800000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //lutmask:lutmask --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+		D8371ACAEA7C227000000000 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -e\n\nexec \"${PROJECT_FILE_PATH}/.tulsi/Scripts/bazel_build.py\" //lutmask:lutmask_test --bazel \"/Users/mkhalaf/.bazel/bin/bazel\" --bazel_bin_path \"bazel-bin\" --verbose ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A74C3450000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				1DF644954CD562E500000000 /* parse.cc in Sources */,
+				1DF64495F0CAD23900000000 /* readfile.cc in Sources */,
+				1DF64495D816EF1A00000000 /* lutmask.cc in Sources */,
+				1DF6449583F3E10800000000 /* lututil.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A74C3450000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				1DF6449581EEC38700000000 /* parse_test.cc in Sources */,
+				1DF64495C833083800000000 /* lutmask_test.cc in Sources */,
+				1DF64495FFA0602200000000 /* lututil_test.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C944958330B192DB00000000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E9F997830B192DA00000000 /* _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0 */;
+			targetProxy = 44AC0CA830B192DB00000000 /* PBXContainerItemProxy */;
+		};
+		C944958363DAC7B700000000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A5282D963DAC7B600000000 /* _bazel_clean_ */;
+			targetProxy = 44AC0CA863DAC7B700000000 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6CC364CB4EF3D37B00000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DONT_RUN_SWIFT_STDLIB_TOOL = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(TULSI_BWRS)",
+					"$(TULSI_WR)/bazel-bin",
+					"$(TULSI_WR)/bazel-genfiles",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PYTHONIOENCODING = utf8;
+				SDKROOT = macosx;
+				TULSI_BWRS = "$(PROJECT_FILE_PATH)/.tulsi/tulsi-workspace";
+				TULSI_PROJECT = lut;
+				TULSI_VERSION = 0.20200930.88;
+				TULSI_WR = "$(SRCROOT)";
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TULSI_WR)/.",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = (
+					"-D_FORTIFY_SOURCE=1",
+					"-D__DATE__=\"redacted\"",
+					"-D__TIMESTAMP__=\"redacted\"",
+					"-D__TIME__=\"redacted\"",
+				);
+				PRODUCT_NAME = _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(TULSI_WR)";
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TULSI_WR)/.",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/",
+					"$(TULSI_WR)/external/gtest",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest",
+					"$(TULSI_WR)/external/bazel_tools",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/bazel_tools",
+					"$(TULSI_WR)/external/gtest/googlemock",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googlemock",
+					"$(TULSI_WR)/external/gtest/googlemock/include",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googlemock/include",
+					"$(TULSI_WR)/external/gtest/googletest",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googletest",
+					"$(TULSI_WR)/external/gtest/googletest/include",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googletest/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = (
+					"-D_FORTIFY_SOURCE=1",
+					"-D__DATE__=\"redacted\"",
+					"-D__TIMESTAMP__=\"redacted\"",
+					"-D__TIME__=\"redacted\"",
+				);
+				PRODUCT_NAME = _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(TULSI_WR)";
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//:lut";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lut;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = "";
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lutmask;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lutmask_test;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lututil;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lututil_test;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = parse;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB4EF3D37B00000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = parse_test;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Debug;
+		};
+		6CC364CB7189E5D100000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DONT_RUN_SWIFT_STDLIB_TOOL = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(TULSI_BWRS)",
+					"$(TULSI_WR)/bazel-bin",
+					"$(TULSI_WR)/bazel-genfiles",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PYTHONIOENCODING = utf8;
+				SDKROOT = macosx;
+				TULSI_BWRS = "$(PROJECT_FILE_PATH)/.tulsi/tulsi-workspace";
+				TULSI_PROJECT = lut;
+				TULSI_VERSION = 0.20200930.88;
+				TULSI_WR = "$(SRCROOT)";
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TULSI_WR)/.",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = (
+					"-D_FORTIFY_SOURCE=1",
+					"-D__DATE__=\"redacted\"",
+					"-D__TIMESTAMP__=\"redacted\"",
+					"-D__TIME__=\"redacted\"",
+				);
+				PRODUCT_NAME = _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(TULSI_WR)";
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TULSI_WR)/.",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/",
+					"$(TULSI_WR)/external/gtest",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest",
+					"$(TULSI_WR)/external/bazel_tools",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/bazel_tools",
+					"$(TULSI_WR)/external/gtest/googlemock",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googlemock",
+					"$(TULSI_WR)/external/gtest/googlemock/include",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googlemock/include",
+					"$(TULSI_WR)/external/gtest/googletest",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googletest",
+					"$(TULSI_WR)/external/gtest/googletest/include",
+					"$(TULSI_BWRS)/bazel-tulsi-includes/x/x/external/gtest/googletest/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = (
+					"-D_FORTIFY_SOURCE=1",
+					"-D__DATE__=\"redacted\"",
+					"-D__TIMESTAMP__=\"redacted\"",
+					"-D__TIME__=\"redacted\"",
+				);
+				PRODUCT_NAME = _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(TULSI_WR)";
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//:lut";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lut;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = "";
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lutmask;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lutmask_test;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lututil;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = lututil_test;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = parse;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB7189E5D100000009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = parse_test;
+				SDKROOT = macosx;
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = Release;
+		};
+		6CC364CB79F192C100000000 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DONT_RUN_SWIFT_STDLIB_TOOL = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PYTHONIOENCODING = utf8;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BWRS = "$(PROJECT_FILE_PATH)/.tulsi/tulsi-workspace";
+				TULSI_PROJECT = lut;
+				TULSI_VERSION = 0.20200930.88;
+				TULSI_WR = "$(SRCROOT)";
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000001 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//:lut";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lut;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = "";
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000002 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lutmask;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000003 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lutmask_test;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000004 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lututil;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000005 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lututil_test;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000006 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = parse;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CB79F192C100000007 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = parse_test;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		6CC364CBC80BD1C400000000 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DONT_RUN_SWIFT_STDLIB_TOOL = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PYTHONIOENCODING = utf8;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BWRS = "$(PROJECT_FILE_PATH)/.tulsi/tulsi-workspace";
+				TULSI_PROJECT = lut;
+				TULSI_VERSION = 0.20200930.88;
+				TULSI_WR = "$(SRCROOT)";
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000001 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//:lut";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lut;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = "";
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000002 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lutmask;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000003 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lutmask:lutmask_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lutmask_test;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lutmask;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000004 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lututil;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000005 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//lututil:lututil_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = lututil_test;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = lututil;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000006 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = parse;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		6CC364CBC80BD1C400000007 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Stub Launch Image";
+				BAZEL_TARGET = "//parse:parse_test";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "${PROJECT_FILE_PATH}/.tulsi/Resources/StubInfoPlist.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "--version";
+				OTHER_LDFLAGS = "--version";
+				OTHER_SWIFT_FLAGS = "--version";
+				PRODUCT_NAME = parse_test;
+				SDKROOT = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PRODUCT_NAME).h";
+				TULSI_BUILD_PATH = parse;
+				TULSI_XCODE_VERSION = 12.2.0.12B45b;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		A03CD7212564DE410063CD00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = _bazel_clean_;
+			};
+			name = Debug;
+		};
+		A03CD7222564DE410063CD00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = _bazel_clean_;
+			};
+			name = Release;
+		};
+		A03CD7232564DE410063CD00 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = _bazel_clean_;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		A03CD7242564DE410063CD00 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = _bazel_clean_;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		A03CD7252564DE410063CD00 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		A03CD7262564DE410063CD00 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = _idx_parse_lutmask_lututil_B8192F0B_macos_min11.0;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+		A03CD7272564DE410063CD00 /* __TulsiTestRunner_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0;
+			};
+			name = __TulsiTestRunner_Debug;
+		};
+		A03CD7282564DE410063CD00 /* __TulsiTestRunner_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = _idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0;
+			};
+			name = __TulsiTestRunner_Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EDF240F04DB5C3A00000000 /* Build configuration list for PBXNativeTarget "lututil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000006 /* Debug */,
+				6CC364CB7189E5D100000006 /* Release */,
+				6CC364CBC80BD1C400000004 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000004 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240F1663EEAD00000000 /* Build configuration list for PBXNativeTarget "parse_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000009 /* Debug */,
+				6CC364CB7189E5D100000009 /* Release */,
+				6CC364CBC80BD1C400000007 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000007 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240F390B86EE00000000 /* Build configuration list for PBXLegacyTarget "_bazel_clean_" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A03CD7212564DE410063CD00 /* Debug */,
+				A03CD7222564DE410063CD00 /* Release */,
+				A03CD7232564DE410063CD00 /* __TulsiTestRunner_Debug */,
+				A03CD7242564DE410063CD00 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240F7A186DD900000000 /* Build configuration list for PBXNativeTarget "_idx_parse_lutmask_lututil_B8192F0B_macos_min11.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000001 /* Debug */,
+				6CC364CB7189E5D100000001 /* Release */,
+				A03CD7252564DE410063CD00 /* __TulsiTestRunner_Debug */,
+				A03CD7262564DE410063CD00 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240F8D49FCE800000000 /* Build configuration list for PBXNativeTarget "_idx_parse_test_lutmask_test_lututil_test_E0471AC0_macos_min11.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000002 /* Debug */,
+				6CC364CB7189E5D100000002 /* Release */,
+				A03CD7272564DE410063CD00 /* __TulsiTestRunner_Debug */,
+				A03CD7282564DE410063CD00 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240FA233106D00000000 /* Build configuration list for PBXNativeTarget "lutmask_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000005 /* Debug */,
+				6CC364CB7189E5D100000005 /* Release */,
+				6CC364CBC80BD1C400000003 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000003 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240FADCF579800000000 /* Build configuration list for PBXNativeTarget "lutmask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000004 /* Debug */,
+				6CC364CB7189E5D100000004 /* Release */,
+				6CC364CBC80BD1C400000002 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000002 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240FBF3E7CC700000000 /* Build configuration list for PBXNativeTarget "parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000008 /* Debug */,
+				6CC364CB7189E5D100000008 /* Release */,
+				6CC364CBC80BD1C400000006 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000006 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240FC542B36F00000000 /* Build configuration list for PBXNativeTarget "lut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000003 /* Debug */,
+				6CC364CB7189E5D100000003 /* Release */,
+				6CC364CBC80BD1C400000001 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000001 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240FE68B922000000000 /* Build configuration list for PBXProject "lut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000000 /* Debug */,
+				6CC364CB7189E5D100000000 /* Release */,
+				6CC364CBC80BD1C400000000 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000000 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDF240FEB1896D900000000 /* Build configuration list for PBXNativeTarget "lututil_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC364CB4EF3D37B00000007 /* Debug */,
+				6CC364CB7189E5D100000007 /* Release */,
+				6CC364CBC80BD1C400000005 /* __TulsiTestRunner_Debug */,
+				6CC364CB79F192C100000005 /* __TulsiTestRunner_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E7176E59EEFCBBF00000000 /* Project object */;
+}

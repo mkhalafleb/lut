@@ -15,6 +15,11 @@
 namespace lutmask {
 LutMask::LutMask(uint16_t mask, unsigned int size) : _lutmask(mask), _size(size) {
   std::string o_range("");
+  
+  _domain.reserve(LutMask::MaxLutSize);
+  
+  // Create the Default Domain
+  std::copy(&default_domain[0], &default_domain[LutMask::MaxLutSize - 1], _domain.begin());
 
   if (_size > LutMask::MaxLutSize) {
     // Throw Exception, class can't be constructed

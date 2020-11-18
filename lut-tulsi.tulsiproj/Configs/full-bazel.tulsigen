@@ -1,0 +1,70 @@
+{
+  "additionalFilePaths" : [
+    "/BUILD",
+    "lutmask/BUILD",
+    "lututil/BUILD",
+    "parse/BUILD"
+  ],
+  "buildTargets" : [
+    "//:lut",
+    "//lutmask:lutmask",
+    "//lutmask:lutmask_test",
+    "//lututil:lututil",
+    "//lututil:lututil_test",
+    "//parse:parse",
+    "//parse:parse_test"
+  ],
+  "optionSet" : {
+    "BazelBuildOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "CLANG_CXX_LANGUAGE_STANDARD" : {
+      "p" : "c++17"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "EnvironmentVariables" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationBazelStartupOptions" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationPlatformConfiguration" : {
+      "p" : "macos_x86_64"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "projectName" : "lut",
+  "sourceFilters" : [
+    "lutmask",
+    "lututil",
+    "parse"
+  ]
+}

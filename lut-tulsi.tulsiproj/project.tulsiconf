@@ -1,0 +1,20 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+      "CLANG_CXX_LANGUAGE_STANDARD" : {
+        "p" : "c++17"
+      },
+      "ProjectGenerationPlatformConfiguration" : {
+        "p" : "macos_x86_64"
+      }
+    }
+  },
+  "packages" : [
+    "",
+    "lutmask",
+    "lututil",
+    "parse"
+  ],
+  "projectName" : "lut",
+  "workspaceRoot" : ".."
+}

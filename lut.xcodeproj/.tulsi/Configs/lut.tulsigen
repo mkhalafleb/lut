@@ -1,0 +1,31 @@
+{
+  "additionalFilePaths" : [
+    "/BUILD",
+    "lutmask/BUILD",
+    "lututil/BUILD",
+    "parse/BUILD"
+  ],
+  "buildTargets" : [
+    "//:lut",
+    "//lutmask:lutmask",
+    "//lutmask:lutmask_test",
+    "//lututil:lututil",
+    "//lututil:lututil_test",
+    "//parse:parse",
+    "//parse:parse_test"
+  ],
+  "optionSet" : {
+    "CLANG_CXX_LANGUAGE_STANDARD" : {
+      "p" : "c++17"
+    },
+    "ProjectGenerationPlatformConfiguration" : {
+      "p" : "macos_x86_64"
+    }
+  },
+  "projectName" : "lut",
+  "sourceFilters" : [
+    "lutmask",
+    "lututil",
+    "parse"
+  ]
+}

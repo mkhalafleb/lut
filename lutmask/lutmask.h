@@ -11,6 +11,7 @@
 #include <cstdint>
 #include <limits>
 #include <string>
+#include <vector>
 
 namespace lutmask {
   
@@ -30,6 +31,8 @@ public:
   // 0xFF00 is when D =1 and D = 0
   // 0XF0F0 is when C = 1 and C = 0 and so on
   static constexpr uint16_t position_mask[LutMask::MaxLutSize] = {0xAAAA, 0xCCCC, 0xF0F0, 0xFF00};
+  
+  static constexpr char default_domain[LutMask::MaxLutSize] =  {'A', 'B', 'C', 'D'};
 
   // Since it is a 16 bit mask, the size is either 0, 1, 2, or 3
   LutMask(uint16_t mask, unsigned int size);
@@ -67,6 +70,10 @@ private:
   
   uint16_t _lutmask;
   unsigned int _size;
+  
+  // For this LUT, What is the domain, D, C, B, A or D, B, A. What are the connected inputs
+  // For this one, the vector size should always match _size above so we need to remove one variable
+  std::vector<char> _domain;
     
     
 };
