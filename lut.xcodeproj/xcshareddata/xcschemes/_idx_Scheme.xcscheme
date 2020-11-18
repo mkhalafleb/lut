@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1220"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951F828274B600000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951FF1CCB70400000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951F828274B600000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951FF1CCB70400000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951F1FFCCC0600000000"
+               BuildableName = "lib_idx_gtest_8DD1FB0B_macos_min11.0.a"
+               BlueprintName = "_idx_gtest_8DD1FB0B_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951FF1CCB70400000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951F828274B600000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951F959C509400000000"
+               BuildableName = "lib_idx_gtest_main_0F29A740_macos_min11.0.a"
+               BlueprintName = "_idx_gtest_main_0F29A740_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951F828274B600000000"
+               BuildableName = "lib_idx_parse_lutmask_lututil_D960A676_macos_min11.0.a"
+               BlueprintName = "_idx_parse_lutmask_lututil_D960A676_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA27951FF1CCB70400000000"
+               BuildableName = "lib_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0.a"
+               BlueprintName = "_idx_parse_test_lutmask_test_lututil_test_21362E3F_macos_min11.0"
+               ReferencedContainer = "container:lut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

@@ -1,0 +1,92 @@
+{
+  "additionalFilePaths" : [
+    "/BUILD",
+    "lutmask/BUILD",
+    "lututil/BUILD",
+    "parse/BUILD"
+  ],
+  "buildTargets" : [
+    "//:lut",
+    "//lutmask:lutmask",
+    "//lutmask:lutmask_test",
+    "//lututil:lututil",
+    "//lututil:lututil_test",
+    "//parse:parse",
+    "//parse:parse_test"
+  ],
+  "optionSet" : {
+    "BazelBuildOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsDebug" : {
+      "p" : "$(inherited)"
+    },
+    "BazelBuildStartupOptionsRelease" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "BuildActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "CLANG_CXX_LANGUAGE_STANDARD" : {
+      "p" : "c++17"
+    },
+    "CommandlineArguments" : {
+      "p" : "$(inherited)"
+    },
+    "EnvironmentVariables" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "LaunchActionPreActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationBazelStartupOptions" : {
+      "p" : "$(inherited)"
+    },
+    "ProjectGenerationPlatformConfiguration" : {
+      "p" : "macos_x86_64"
+    },
+    "TestActionPostActionScript" : {
+      "p" : "$(inherited)"
+    },
+    "TestActionPreActionScript" : {
+      "p" : "$(inherited)"
+    }
+  },
+  "projectName" : "lut",
+  "sourceFilters" : [
+    "external",
+    "external/bazel_tools",
+    "external/bazel_tools/platforms",
+    "external/gtest",
+    "external/gtest/googlemock",
+    "external/gtest/googlemock/include",
+    "external/gtest/googlemock/include/gmock",
+    "external/gtest/googlemock/include/gmock/internal",
+    "external/gtest/googlemock/include/gmock/internal/custom",
+    "external/gtest/googlemock/src",
+    "external/gtest/googletest",
+    "external/gtest/googletest/include",
+    "external/gtest/googletest/include/gtest",
+    "external/gtest/googletest/include/gtest/internal",
+    "external/gtest/googletest/include/gtest/internal/custom",
+    "external/gtest/googletest/src",
+    "external/platforms",
+    "external/platforms/os",
+    "external/rules_cc",
+    "external/rules_cc/cc",
+    "external/rules_cc/cc/private",
+    "external/rules_cc/cc/private/rules_impl",
+    "lutmask",
+    "lututil",
+    "parse"
+  ]
+}
