@@ -6,7 +6,7 @@
 #define LUT_LITUTIL_H
 namespace lututil {
 
-std::string print_mask(const lutmask::LutMask &mask, unsigned int pos, char *domain_char);
+std::string print_mask(const lutmask::LutMask &mask, unsigned int pos);
 
 unsigned int calculate_best_pivot(const lutmask::LutMask &mask);
 

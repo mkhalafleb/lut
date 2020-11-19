@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA27951F9D18D24E00000000"
+               BlueprintIdentifier = "2E9F99783DDF977E00000000"
                BuildableName = "lut.app"
                BlueprintName = "lut"
                ReferencedContainer = "container:lut.xcodeproj">
@@ -44,12 +44,18 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F9D18D24E00000000"
+            BlueprintIdentifier = "2E9F99783DDF977E00000000"
             BuildableName = "lut.app"
             BlueprintName = "lut"
             ReferencedContainer = "container:lut.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "fffc"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "__TulsiTestRunner_Release"
@@ -61,7 +67,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA27951F9D18D24E00000000"
+            BlueprintIdentifier = "2E9F99783DDF977E00000000"
             BuildableName = "lut.app"
             BlueprintName = "lut"
             ReferencedContainer = "container:lut.xcodeproj">
