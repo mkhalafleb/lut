@@ -54,9 +54,6 @@ public:
  
   char GetCharDomainAtPos(unsigned int pos) const;
 
-  // To be Removed
-  unsigned int Size() const {return(static_cast<unsigned int> (_domain.size()));};
-
   bool IsGnd() const;
   bool IsVcc() const;
 
