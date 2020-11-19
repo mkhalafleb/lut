@@ -128,6 +128,16 @@ bool LutMask::IsSingleLiteralAtPos(unsigned int pos) const {
 
   return (false);
 }
+  
+std::vector<unsigned int> LutMask::GetMetricVec() const {
+  std::vector<unsigned int> m(_domain.size(), 0);
+  return(m);
+};
+  
+char LutMask::GetCharDomainAtPos(unsigned int pos) const {
+  return(_domain.at(pos));
+}
+
 
 bool LutMask::IsSingleLiteral() const {
   return (_domain.size() == 1);

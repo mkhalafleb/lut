@@ -11,26 +11,26 @@ namespace lututil {
 unsigned int calculate_best_pivot(const lutmask::LutMask &mask) {
   unsigned int best_pivot;
   unsigned int i;
-  unsigned int num_lit[4];
   unsigned int smallest;
 
   if (mask.IsSingleLiteral()) {
     return(0);
   }
   /* initialize literals */
-  memset(&num_lit[0], 0, mask.Size() * sizeof(int));
-
-  for (i = 0; i < mask.Size(); i++) {
-    num_lit[i] = find_overall_lit(mask, i);
+  std::vector<unsigned int> lit_cost(mask.GetMetricVec());
+  
+  
+  for (i = 0; i < lit_cost.size(); i++) {
+    lit_cost[i] = find_overall_lit(mask, i);
   }
 
   smallest = 0;
   best_pivot = 0;
 
-  for (i = 0; i < mask.Size(); i++) {
-    if ((num_lit[i] < smallest) || (smallest == 0)) {
-     if (num_lit[i] != 0) {
-        smallest = num_lit[i];
+  for (i = 0; i < lit_cost.size(); i++) {
+    if ((lit_cost[i] < smallest) || (smallest == 0)) {
+     if (lit_cost[i] != 0) {
+        smallest = lit_cost[i];
         best_pivot = i;
       }
     }

@@ -49,6 +49,10 @@ public:
   bool IsIndependentOfPos(unsigned int pos) const;
 
   bool IsXorAtPos(unsigned int pos) const;
+  
+  std::vector<unsigned int> GetMetricVec() const;
+ 
+  char GetCharDomainAtPos(unsigned int pos) const;
 
   // To be Removed
   unsigned int Size() const {return(static_cast<unsigned int> (_domain.size()));};
