@@ -51,7 +51,7 @@ public:
   bool IsXorAtPos(unsigned int pos) const;
 
   // To be Removed
-  unsigned int Size() const {return(_size);};
+  unsigned int Size() const {return(static_cast<unsigned int> (_domain.size()));};
 
   bool IsGnd() const;
   bool IsVcc() const;
@@ -59,9 +59,12 @@ public:
   bool  operator ==(const lutmask::LutMask &lut_mask) const;
   bool  operator !=(const lutmask::LutMask &lut_mask) const;
 
-  std::string PrintMask() const;
   
 private:
+
+  // When we shrink a mask, we need to change the domain so we need a new constructor but
+  // that one can't be called from outside.
+  LutMask(uint16_t mask, unsigned int size, const std::vector<char>  &new_domain);
   
   // Throws Exception if pos >= size;
   void ValidatePosToSize(unsigned int pos) const;
@@ -69,7 +72,6 @@ private:
   uint16_t ShrinkMaskAtPos(uint16_t PosMask, unsigned int pos) const;
   
   uint16_t _lutmask;
-  unsigned int _size;
   
   // For this LUT, What is the domain, D, C, B, A or D, B, A. What are the connected inputs
   // For this one, the vector size should always match _size above so we need to remove one variable
