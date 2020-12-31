@@ -10,3 +10,7 @@ xcuserdata
 
 # Tulsi-related Bazel symlinks (which are generally self-cleaned).
 tulsigen-*
+bazel-bin
+bazel-lut
+bazel-testlogs
+bazel-out
