@@ -12,6 +12,7 @@
 #include <limits>
 #include <string>
 #include <vector>
+#include "lutdomain/lutdomain.h"
 
 namespace lutmask {
   
@@ -77,6 +78,8 @@ private:
   // For this LUT, What is the domain, D, C, B, A or D, B, A. What are the connected inputs
   // For this one, the vector size should always match _size above so we need to remove one variable
   std::vector<char> _domain;
+
+  lutdomain::LutDomain domainc_;
     
     
 };

@@ -14,7 +14,7 @@
 
 
 namespace lutmask {
-LutMask::LutMask(uint16_t mask, unsigned int size) : _lutmask(mask) {
+LutMask::LutMask(uint16_t mask, unsigned int size) : _lutmask(mask), domainc_(size, lutdomain::LutDomain::DefaultDomain) {
   std::string o_range("");
   
   _domain.reserve(LutMask::MaxLutSize);
