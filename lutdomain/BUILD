@@ -9,6 +9,7 @@ cc_test(
     name = "lutdomain_test",
     srcs = ["lutdomain_test.cc"],
     deps = [
+        "lutdomain",
         "@gtest",
         "@gtest//:gtest_main",
     ],
