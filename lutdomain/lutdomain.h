@@ -23,6 +23,8 @@ public:
 
   unsigned int GetSize() const;
   std::array <char, LutDomain::MaxLutSize> GetDomain() const;
+
+  LutDomain ShrinkAtPos(unsigned int pos) const;
   
   bool  operator ==(const lutdomain::LutDomain &lut_mask) const;
   bool  operator !=(const lutdomain::LutDomain &lut_mask) const;
