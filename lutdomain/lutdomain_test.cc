@@ -1,4 +1,5 @@
 #include "lutdomain.h"
+
 #include "gtest/gtest.h"
 
 namespace {
@@ -14,7 +15,6 @@ TEST_F(LutDomainTest, EQUALDOMAIN) {
   lutdomain::LutDomain d2(4, {'A', 'B', 'C', 'D'});
 
   EXPECT_EQ(d1, d2);
-
 }
 
 TEST_F(LutDomainTest, NOTEQUALSIZE) {
@@ -38,8 +38,4 @@ TEST_F(LutDomainTest, EQUALSMALLER) {
   EXPECT_EQ(d1, d2);
 }
 
-
-
-
 }  // namespace
-
