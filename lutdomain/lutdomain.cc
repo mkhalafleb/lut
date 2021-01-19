@@ -29,7 +29,7 @@ bool LutDomain::operator!=(const LutDomain &domain) const {
 
 LutDomain LutDomain::ShrinkAtPos(unsigned int pos) const {
   if (pos >= size_) {
-    // Illegal condition but we don't want to assert, just return a default mask
+    // Illegal condition but we don't want to assert, just return the same mask
     // return ()
     return (*this);
   }
