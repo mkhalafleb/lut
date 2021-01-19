@@ -20,7 +20,6 @@ namespace lutmask {
 
 class LutMask {
  public:
-
   // Since it is a 16 bit mask, the size is either 0, 1, 2, or 3
   // It creates a mask with the default domain of lutdomain::LutDomain
   LutMask(uint16_t mask, unsigned int size);

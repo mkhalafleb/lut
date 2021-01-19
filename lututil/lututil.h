@@ -1,5 +1,6 @@
 
 #include <string>
+
 #include "lutmask/lutmask.h"
 
 #ifndef LUT_LUTUTIL_H
@@ -14,7 +15,6 @@ unsigned int find_overall_lit(const lutmask::LutMask &mask, unsigned int pos);
 
 std::string generate_sop(const lutmask::LutMask &mask);
 
-
-} // namespace lututil
+}  // namespace lututil
 
 #endif

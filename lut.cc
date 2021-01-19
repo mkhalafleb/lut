@@ -8,12 +8,8 @@
 #include <optional>
 
 #include "lutmask/lutmask.h"
-#include "parse/parse.h"
 #include "lututil/lututil.h"
-
-
-
-
+#include "parse/parse.h"
 
 int main(int argc, char **argv) {
 

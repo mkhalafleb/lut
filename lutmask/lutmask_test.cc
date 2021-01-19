@@ -1,6 +1,8 @@
 #include "lutmask.h"
-#include "gtest/gtest.h"
+
 #include <exception>
+
+#include "gtest/gtest.h"
 
 namespace {
 
