@@ -19,8 +19,11 @@ bool LutDomain::operator==(const LutDomain &domain) const {
 
 unsigned int LutDomain::GetSize() const { return (size_); }
 
-std::array<char, LutDomain::MaxLutSize> LutDomain::GetDomain() const {
-  return (domain_);
+
+char LutDomain::GetDomainAtPos(unsigned int pos) const {
+  // May need to check for exceptions and return something else
+  return(domain_.at(pos));
+
 }
 
 bool LutDomain::operator!=(const LutDomain &domain) const {

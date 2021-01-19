@@ -125,7 +125,7 @@ std::vector<unsigned int> LutMask::GetMetricVec() const {
 };
   
 char LutMask::GetCharDomainAtPos(unsigned int pos) const {
-  return(domainc_.GetDomain().at(pos));
+  return(domainc_.GetDomainAtPos(pos));
 }
 
 

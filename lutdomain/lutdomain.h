@@ -23,7 +23,8 @@ class LutDomain {
             const std::array<char, LutDomain::MaxLutSize> &domain);
 
   unsigned int GetSize() const;
-  std::array<char, LutDomain::MaxLutSize> GetDomain() const;
+
+  char GetDomainAtPos(unsigned int pos) const;
 
   LutDomain ShrinkAtPos(unsigned int pos) const;
 
