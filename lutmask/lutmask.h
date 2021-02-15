@@ -19,7 +19,7 @@
 namespace lutmask {
 
 class LutMask {
- public:
+public:
   // Since it is a 16 bit mask, the size is either 0, 1, 2, or 3
   // It creates a mask with the default domain of lutdomain::LutDomain
   LutMask(uint16_t mask, unsigned int size);
@@ -47,7 +47,7 @@ class LutMask {
   bool operator==(const lutmask::LutMask &lut_mask) const;
   bool operator!=(const lutmask::LutMask &lut_mask) const;
 
- private:
+private:
   // 0x0001 = 2^1 - 1 = 2 ^ (2^0) - 1
   // 0x0003 = 2^2 - 1 = 2 ^ (2^1) - 1
   // 0x000F = 2^4 -1 = 2 ^ (2^2) - 1
@@ -78,6 +78,6 @@ class LutMask {
   lutdomain::LutDomain domainc_;
 };
 
-}  // namespace lutmask
+} // namespace lutmask
 
 #endif /* lutmask_h */
